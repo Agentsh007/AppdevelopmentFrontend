@@ -1,0 +1,3638 @@
+
+
+// === File: .\my_app\.dart_tool\dartpad\web_plugin_registrant.dart ===
+// Flutter web plugin registrant file.
+//
+// Generated file. Do not edit.
+//
+
+// @dart = 2.13
+// ignore_for_file: type=lint
+
+import 'package:flutter_secure_storage_web/flutter_secure_storage_web.dart';
+import 'package:image_picker_for_web/image_picker_for_web.dart';
+import 'package:shared_preferences_web/shared_preferences_web.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+
+void registerPlugins([final Registrar? pluginRegistrar]) {
+  final Registrar registrar = pluginRegistrar ?? webPluginRegistrar;
+  FlutterSecureStorageWeb.registerWith(registrar);
+  ImagePickerPlugin.registerWith(registrar);
+  SharedPreferencesPlugin.registerWith(registrar);
+  registrar.registerMessageHandler();
+}
+
+
+
+// === File: .\my_app\.dart_tool\flutter_build\dart_plugin_registrant.dart ===
+//
+// Generated file. Do not edit.
+// This file is generated from template in file `flutter_tools/lib/src/flutter_plugins.dart`.
+//
+
+// @dart = 3.7
+
+import 'dart:io'; // flutter_ignore: dart_io_import.
+import 'package:image_picker_android/image_picker_android.dart';
+import 'package:path_provider_android/path_provider_android.dart';
+import 'package:shared_preferences_android/shared_preferences_android.dart';
+import 'package:image_picker_ios/image_picker_ios.dart';
+import 'package:path_provider_foundation/path_provider_foundation.dart';
+import 'package:shared_preferences_foundation/shared_preferences_foundation.dart';
+import 'package:file_selector_linux/file_selector_linux.dart';
+import 'package:image_picker_linux/image_picker_linux.dart';
+import 'package:path_provider_linux/path_provider_linux.dart';
+import 'package:shared_preferences_linux/shared_preferences_linux.dart';
+import 'package:file_selector_macos/file_selector_macos.dart';
+import 'package:image_picker_macos/image_picker_macos.dart';
+import 'package:path_provider_foundation/path_provider_foundation.dart';
+import 'package:shared_preferences_foundation/shared_preferences_foundation.dart';
+import 'package:file_selector_windows/file_selector_windows.dart';
+import 'package:flutter_secure_storage_windows/flutter_secure_storage_windows.dart';
+import 'package:image_picker_windows/image_picker_windows.dart';
+import 'package:path_provider_windows/path_provider_windows.dart';
+import 'package:shared_preferences_windows/shared_preferences_windows.dart';
+
+@pragma('vm:entry-point')
+class _PluginRegistrant {
+
+  @pragma('vm:entry-point')
+  static void register() {
+    if (Platform.isAndroid) {
+      try {
+        ImagePickerAndroid.registerWith();
+      } catch (err) {
+        print(
+          '`image_picker_android` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        PathProviderAndroid.registerWith();
+      } catch (err) {
+        print(
+          '`path_provider_android` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        SharedPreferencesAndroid.registerWith();
+      } catch (err) {
+        print(
+          '`shared_preferences_android` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+    } else if (Platform.isIOS) {
+      try {
+        ImagePickerIOS.registerWith();
+      } catch (err) {
+        print(
+          '`image_picker_ios` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        PathProviderFoundation.registerWith();
+      } catch (err) {
+        print(
+          '`path_provider_foundation` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        SharedPreferencesFoundation.registerWith();
+      } catch (err) {
+        print(
+          '`shared_preferences_foundation` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+    } else if (Platform.isLinux) {
+      try {
+        FileSelectorLinux.registerWith();
+      } catch (err) {
+        print(
+          '`file_selector_linux` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        ImagePickerLinux.registerWith();
+      } catch (err) {
+        print(
+          '`image_picker_linux` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        PathProviderLinux.registerWith();
+      } catch (err) {
+        print(
+          '`path_provider_linux` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        SharedPreferencesLinux.registerWith();
+      } catch (err) {
+        print(
+          '`shared_preferences_linux` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+    } else if (Platform.isMacOS) {
+      try {
+        FileSelectorMacOS.registerWith();
+      } catch (err) {
+        print(
+          '`file_selector_macos` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        ImagePickerMacOS.registerWith();
+      } catch (err) {
+        print(
+          '`image_picker_macos` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        PathProviderFoundation.registerWith();
+      } catch (err) {
+        print(
+          '`path_provider_foundation` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        SharedPreferencesFoundation.registerWith();
+      } catch (err) {
+        print(
+          '`shared_preferences_foundation` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+    } else if (Platform.isWindows) {
+      try {
+        FileSelectorWindows.registerWith();
+      } catch (err) {
+        print(
+          '`file_selector_windows` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        FlutterSecureStorageWindows.registerWith();
+      } catch (err) {
+        print(
+          '`flutter_secure_storage_windows` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        ImagePickerWindows.registerWith();
+      } catch (err) {
+        print(
+          '`image_picker_windows` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        PathProviderWindows.registerWith();
+      } catch (err) {
+        print(
+          '`path_provider_windows` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+      try {
+        SharedPreferencesWindows.registerWith();
+      } catch (err) {
+        print(
+          '`shared_preferences_windows` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+      }
+
+    }
+  }
+}
+
+
+
+// === File: .\my_app\lib\main.dart ===
+import 'package:flutter/material.dart';
+import 'package:my_app/presentation/screens/lost_and_found/profile_screen.dart';
+import 'package:my_app/presentation/screens/test_fetch_screen.dart';
+import 'package:my_app/presentation/screens/test_fetch_screen2.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/presentation/screens/login_and_register/login_screen.dart';
+import 'package:my_app/presentation/screens/login_and_register/register_screen.dart';
+import 'package:my_app/presentation/screens/login_and_register/verify_email_screen.dart';
+import 'package:my_app/presentation/screens/home_screen.dart';
+import 'package:my_app/presentation/screens/splash_screen.dart';
+import 'package:my_app/data/repositories/auth_repository.dart';
+import 'package:my_app/domain/providers/auth_provider.dart';
+
+void main() {
+  runApp(const CampusConnectApp());
+}
+
+class CampusConnectApp extends StatelessWidget {
+  const CampusConnectApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => AuthProvider(AuthRepository()),
+        ),
+      ],
+      child: MaterialApp(
+        title: 'Campus Connect',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blueAccent,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              padding: const EdgeInsets.symmetric(vertical: 12),
+            ),
+          ),
+          textTheme: const TextTheme(
+            titleLarge: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+        ),
+        initialRoute: '/splash',
+        routes: {
+          '/splash': (context) => const SplashScreen(),
+          '/login': (context) => const LoginScreen(),
+          '/register': (context) => const RegisterScreen(),
+          '/verify-email': (context) => const VerifyEmailScreen(),
+          '/home': (context) => const HomeScreen(),
+          '/profile': (context) => const ProfileScreen(), // Added profile route
+          '/test-fetch': (context) => const TestFetchScreen(),
+          '/test-fetch2': (context) => const TestFetchScreen2(),
+        },
+      ),
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\core\constants.dart ===
+class Constants {
+  static const String baseUrl = 'http://10.0.2.2:8000/api';
+}
+
+
+// === File: .\my_app\lib\data\models\academic_unit_model.dart ===
+class AcademicUnitModel {
+  final int id;
+  final String name;
+  final String shortName;
+  final String unitType;
+  final int universityId;
+
+  AcademicUnitModel({
+    required this.id,
+    required this.name,
+    required this.shortName,
+    required this.unitType,
+    required this.universityId,
+  });
+
+  factory AcademicUnitModel.fromJson(Map<String, dynamic> json) {
+    return AcademicUnitModel(
+      id: json['id'],
+      name: json['name'],
+      shortName: json['short_name'],
+      unitType: json['unit_type'],
+      universityId: json['university']['id'],
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\data\models\claim.dart ===
+import 'package:my_app/data/models/lost_and_found_item.dart'; 
+
+class Claim {
+  final int id;
+  final User claimant;
+  final String description;
+  final String status;
+  final int? lostItemId;
+  final int? foundItemId;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+
+  Claim({
+    required this.id,
+    required this.claimant,
+    required this.description,
+    required this.status,
+    this.lostItemId,
+    this.foundItemId,
+    required this.createdAt,
+    required this.updatedAt,
+  });
+
+  factory Claim.fromJson(Map<String, dynamic> json) {
+    return Claim(
+      id: json['id'] as int? ?? -1,
+      claimant: User.fromJson(json['claimant'] as Map<String, dynamic>? ?? {'id': -1, 'name': 'Unknown', 'detail_url': ''}),
+      description: json['description'] as String? ?? 'No description',
+      status: json['status'] as String? ?? 'pending',
+      lostItemId: json['lost_item'] as int?,
+      foundItemId: json['found_item'] as int?,
+      createdAt: json['created_at'] != null ? DateTime.parse(json['created_at'] as String) : DateTime.now(),
+      updatedAt: json['updated_at'] != null ? DateTime.parse(json['updated_at'] as String) : DateTime.now(),
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\data\models\lost_and_found_item.dart ===
+import 'package:my_app/data/models/user_model.dart';
+
+class Media {
+  final String id;
+  final String fileUrl;
+
+  Media({required this.id, required this.fileUrl});
+
+  factory Media.fromJson(Map<String, dynamic> json) {
+    return Media(
+      id: json['id'] as String? ?? '',
+      fileUrl: json['file_url'] as String? ?? '',
+    );
+  }
+}
+
+class LostAndFoundItem {
+  final int id;
+  final User user;
+  final String title;
+  final String description;
+  final String? lostDate;
+  final String? foundDate;
+  final String approximateTime;
+  final String location;
+  final String status;
+  final String approvalStatus;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  final List<Media> media;
+  final String postType;
+  final bool isAdmin;
+  final String detailUrl;
+  final String claimsUrl;
+  final String? resolveUrl;
+  final String? approveUrl;
+  final int? university;
+
+  LostAndFoundItem({
+    required this.id,
+    required this.user,
+    required this.title,
+    required this.description,
+    this.lostDate,
+    this.foundDate,
+    required this.approximateTime,
+    required this.location,
+    required this.status,
+    required this.approvalStatus,
+    required this.createdAt,
+    required this.updatedAt,
+    required this.media,
+    required this.postType,
+    required this.isAdmin,
+    required this.detailUrl,
+    required this.claimsUrl,
+    this.resolveUrl,
+    this.approveUrl,
+    this.university,
+  });
+
+  factory LostAndFoundItem.fromJson(Map<String, dynamic> json) {
+    print('Parsing JSON: $json'); // Log the JSON for debugging
+    return LostAndFoundItem(
+      id: json['id'] as int? ?? -1,
+      user: User.fromJson(json['user'] as Map<String, dynamic>? ?? {'id': -1, 'name': 'Unknown User', 'detail_url': ''}),
+      title: json['title'] as String? ?? 'No title',
+      description: json['description'] as String? ?? 'No description',
+      lostDate: json['lost_date'] as String?,
+      foundDate: json['found_date'] as String?,
+      approximateTime: json['approximate_time'] as String? ?? 'Unknown time',
+      location: json['location'] as String? ?? 'Unknown location',
+      status: json['status'] as String? ?? 'Unknown',
+      approvalStatus: json['approval_status'] as String? ?? 'Pending',
+      createdAt: json['created_at'] != null ? DateTime.parse(json['created_at'] as String) : DateTime.now(),
+      updatedAt: json['updated_at'] != null ? DateTime.parse(json['updated_at'] as String) : DateTime.now(),
+      media: (json['media'] as List<dynamic>? ?? []).map((mediaJson) => Media.fromJson(mediaJson as Map<String, dynamic>)).toList(),
+      postType: json['post_type'] as String? ?? 'Unknown',
+      isAdmin: json['is_admin'] as bool? ?? false,
+      detailUrl: json['detail_url'] as String? ?? '',
+      claimsUrl: json['claims_url'] as String? ?? '',
+      resolveUrl: json['resolve_url'] as String?,
+      approveUrl: json['approve_url'] as String?,
+      university: json['university'] as int?,
+    );
+  }
+}
+
+class User {
+  final int id;
+  final String name;
+  final String detailUrl;
+
+  User({required this.id, required this.name, required this.detailUrl});
+
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      id: json['id'] as int? ?? -1,
+      name: json['name'] as String? ?? 'Unknown User',
+      detailUrl: json['detail_url'] as String? ?? '',
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\data\models\teacher_designation_model.dart ===
+class TeacherDesignationModel {
+  final int id;
+  final String name;
+
+  TeacherDesignationModel({required this.id, required this.name});
+
+  factory TeacherDesignationModel.fromJson(Map<String, dynamic> json) {
+    return TeacherDesignationModel(
+      id: json['id'],
+      name: json['name'],
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\data\models\university_model.dart ===
+class UniversityModel {
+  final int id;
+  final String name;
+  final String shortName;
+
+  UniversityModel({
+    required this.id,
+    required this.name,
+    required this.shortName,
+  });
+
+  factory UniversityModel.fromJson(Map<String, dynamic> json) {
+    return UniversityModel(
+      id: json['id'],
+      name: json['name'],
+      shortName: json['short_name'],
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\data\models\user_model.dart ===
+class UserModel {
+  final int id;
+  final String name;
+  final String email;
+  final String phone;
+  final String bloodGroup;
+  final String? contactVisibility;
+  final String role;
+  final String adminLevel;
+  final Map<String, dynamic>? university; // Allow null if not always present
+  final Map<String, dynamic>? academicUnit; // Allow null if not always present
+  final String? teacherDesignation;
+  final String? designation;
+  final String? workplace;
+  final String token;
+  UserModel({
+    required this.id,
+    required this.name,
+    required this.email,
+    required this.phone,
+    required this.bloodGroup,
+    this.contactVisibility,
+    required this.role,
+    required this.adminLevel,
+    this.university,
+    this.academicUnit,
+    this.teacherDesignation,
+    this.designation,
+    this.workplace,
+    required this.token,
+  });
+
+  factory UserModel.fromJson(Map<String, dynamic> json) {
+    return UserModel(
+      id: json['id'] as int? ?? 0, // Default to 0 if null, adjust as needed
+      name:
+          json['name'] as String? ?? 'Unknown', // Default to 'Unknown' if null
+      email: json['email'] as String? ?? '', // Default to empty string if null
+      phone: json['phone'] as String? ?? '', // Default to empty string if null
+      bloodGroup:
+          json['blood_group'] as String? ??
+          '', // Default to empty string if null
+      contactVisibility: json['contact_visibility'] as String?,
+      role:
+          json['role'] as String? ?? 'unknown', // Default to 'unknown' if null
+      adminLevel:
+          json['admin_level'] as String? ?? 'none', // Default to 'none' if null
+      university: json['university'] as Map<String, dynamic>?,
+      academicUnit: json['academic_unit'] as Map<String, dynamic>?,
+      teacherDesignation: json['teacher_designation'] as String?,
+      designation: json['designation'] as String?,
+      workplace: json['workplace'] as String?,
+      token: json['token'] ?? '',
+    );
+  }
+   @override
+  String toString() {
+    return 'UserModel(id: $id, name: $name, email: $email, university: $university)';
+  }
+}
+
+
+
+// === File: .\my_app\lib\data\repositories\auth_repository.dart ===
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:my_app/core/constants.dart';
+import 'package:my_app/data/models/university_model.dart';
+import 'package:my_app/data/models/academic_unit_model.dart';
+import 'package:my_app/data/models/teacher_designation_model.dart';
+import 'package:my_app/data/models/user_model.dart';
+import 'dart:developer' as developer;
+
+class AuthRepository {
+  final storage = const FlutterSecureStorage();
+
+  Future<List<TeacherDesignationModel>> fetchTeacherDesignations() async {
+    developer.log('Fetching teacher designations from: ${Constants.baseUrl}/accounts/teacher-designations/');
+    final response = await http.get(
+      Uri.parse('${Constants.baseUrl}/universities/teacher-designations/'),
+      headers: {'Content-Type': 'application/json'},
+    );
+
+    developer.log('Teacher designations response status: ${response.statusCode}');
+    developer.log('Teacher designations response body: ${response.body}');
+
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((json) => TeacherDesignationModel.fromJson(json)).toList();
+    } else {
+      throw Exception('Failed to fetch teacher designations. Status: ${response.statusCode}, Body: ${response.body}');
+    }
+  }
+
+  Future<Map<String, dynamic>> register({
+    required String name,
+    required String email,
+    required String password,
+    required String confirmPassword,
+    required String phone,
+    required String bloodGroup,
+    required String role,
+    required int university,
+    required int academicUnit,
+    int? teacherDesignation,
+  }) async {
+    final response = await http.post(
+      Uri.parse('${Constants.baseUrl}/accounts/register/'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'name': name,
+        'email': email,
+        'password': password,
+        'confirm_password': confirmPassword,
+        'phone': phone,
+        'blood_group': bloodGroup,
+        'role': role,
+        'university': university,
+        'academic_unit': academicUnit,
+        'teacher_designation': teacherDesignation,
+      }),
+    );
+
+    return jsonDecode(response.body);
+  }
+
+  Future<void> verifyEmail(String email, String code) async {
+    final response = await http.post(
+      Uri.parse('${Constants.baseUrl}/accounts/verify-email/'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'email': email,
+        'code': code,
+      }),
+    );
+
+    if (response.statusCode != 200) {
+      throw Exception(jsonDecode(response.body)['message']);
+    }
+  }
+
+  Future<Map<String, dynamic>> login(String email, String password) async {
+    final response = await http.post(
+      Uri.parse('${Constants.baseUrl}/accounts/login/'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'email': email,
+        'password': password,
+      }),
+    );
+
+    print('Login response status: ${response.statusCode}');
+    print('Login response body: ${response.body}');
+
+    try {
+      final data = jsonDecode(response.body);
+      if (response.statusCode == 200 && data['token'] != null) {
+        print('Storing token: ${data['token']}');
+        await storage.write(key: 'auth_token', value: data['token']);
+        data['user']['token'] = data['token'];
+      } else {
+        print('Token not found in response or login failed');
+      }
+      return data;
+    } catch (e) {
+      print('Error parsing login response: $e');
+      throw Exception('Failed to parse login response: $e');
+    }
+  }
+
+  Future<void> logout() async {
+    final token = await storage.read(key: 'auth_token');
+    if (token != null) {
+      await http.post(
+        Uri.parse('${Constants.baseUrl}/accounts/logout/'),
+        headers: {'Authorization': 'Token $token'},
+      );
+      await storage.delete(key: 'auth_token');
+    }
+  }
+
+  Future<List<UniversityModel>> fetchUniversities() async {
+    final response = await http.get(
+      Uri.parse('${Constants.baseUrl}/universities/'),
+      headers: {'Content-Type': 'application/json'},
+    );
+
+    if (response.statusCode == 200) {
+      final List<dynamic> data = jsonDecode(response.body);
+      return data.map((json) => UniversityModel.fromJson(json)).toList();
+    } else {
+      throw Exception('Failed to fetch universities. Status: ${response.statusCode}, Body: ${response.body}');
+    }
+  }
+
+  Future<List<AcademicUnitModel>> fetchAcademicUnits(int universityId) async {
+    print('Fetching academic units for universityId: $universityId');
+    final response = await http.get(
+      Uri.parse('${Constants.baseUrl}/universities/departments-institutes/?university_id=$universityId'),
+      headers: {'Content-Type': 'application/json'},
+    );
+
+    print('Response status: ${response.statusCode}');
+    print('Response body: ${response.body}');
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      final List<dynamic> departments = data['departments'] ?? [];
+      final List<dynamic> institutes = data['institutes'] ?? [];
+      return [...departments, ...institutes]
+          .map((json) => AcademicUnitModel.fromJson(json))
+          .toList();
+    } else {
+      throw Exception('Failed to fetch academic units for university $universityId. Status: ${response.statusCode}, Body: ${response.body}');
+    }
+  }
+}
+
+
+// === File: .\my_app\lib\domain\providers\auth_provider.dart ===
+import 'package:flutter/material.dart';
+import 'package:my_app/data/repositories/auth_repository.dart';
+import 'package:my_app/data/models/university_model.dart';
+import 'package:my_app/data/models/academic_unit_model.dart';
+import 'package:my_app/data/models/teacher_designation_model.dart';
+import 'package:my_app/data/models/user_model.dart';
+import 'dart:developer' as developer;
+
+class AuthProvider with ChangeNotifier {
+  final AuthRepository _authRepository;
+  UserModel? _user;
+  String? _errorMessage;
+  bool _isLoading = false;
+  List<UniversityModel> _universities = [];
+  List<AcademicUnitModel> _academicUnits = [];
+  List<TeacherDesignationModel> _teacherDesignations = [];
+
+  AuthProvider(this._authRepository);
+
+  UserModel? get user => _user;
+  String? get errorMessage => _errorMessage;
+  bool get isLoading => _isLoading;
+  List<UniversityModel> get universities => _universities;
+  List<AcademicUnitModel> get academicUnits => _academicUnits;
+  List<TeacherDesignationModel> get teacherDesignations => _teacherDesignations;
+  bool get isLoggedIn => _user != null;
+
+  Future<void> fetchUniversities() async {
+    _isLoading = true;
+    notifyListeners();
+    developer.log('Fetching universities...');
+
+    try {
+      _universities = await _authRepository.fetchUniversities();
+      developer.log('Universities fetched: ${_universities.length} items');
+    } catch (e) {
+      _errorMessage = 'Failed to load universities: $e';
+      developer.log('University fetch error: $_errorMessage');
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  Future<void> fetchAcademicUnits(int universityId) async {
+    _isLoading = true;
+    _errorMessage = null;
+    notifyListeners();
+    developer.log('Fetching academic units for universityId: $universityId');
+
+    try {
+      _academicUnits = await _authRepository.fetchAcademicUnits(universityId);
+      developer.log('Academic units fetched: ${_academicUnits.length} items');
+    } catch (e) {
+      _errorMessage = 'Failed to load academic units: $e';
+      _academicUnits = [];
+      developer.log('Academic unit fetch error: $_errorMessage');
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  Future<void> fetchTeacherDesignations() async {
+    _isLoading = true;
+    notifyListeners();
+    developer.log('Fetching teacher designations...');
+
+    try {
+      _teacherDesignations = await _authRepository.fetchTeacherDesignations();
+      developer.log('Teacher designations fetched: ${_teacherDesignations.length} items');
+    } catch (e) {
+      _errorMessage = 'Failed to load teacher designations: $e';
+      _teacherDesignations = [];
+      developer.log('Teacher designation fetch error: $_errorMessage');
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  Future<void> register({
+    required String name,
+    required String email,
+    required String password,
+    required String confirmPassword,
+    required String phone,
+    required String bloodGroup,
+    required String role,
+    required int university,
+    required int academicUnit,
+    int? teacherDesignation,
+  }) async {
+    _isLoading = true;
+    _errorMessage = null;
+    notifyListeners();
+
+    try {
+      final response = await _authRepository.register(
+        name: name,
+        email: email,
+        password: password,
+        confirmPassword: confirmPassword,
+        phone: phone,
+        bloodGroup: bloodGroup,
+        role: role,
+        university: university,
+        academicUnit: academicUnit,
+        teacherDesignation: teacherDesignation,
+      );
+
+      if (response['message'] != 'User registered, please verify your email.') {
+        _errorMessage = response['message'].toString();
+      }
+    } catch (e) {
+      _errorMessage = e.toString();
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  Future<bool> verifyEmail(String email, String code) async {
+    _isLoading = true;
+    _errorMessage = null;
+    notifyListeners();
+
+    try {
+      await _authRepository.verifyEmail(email, code);
+      return true;
+    } catch (e) {
+      _errorMessage = e.toString();
+      return false;
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  Future<bool> login(String email, String password) async {
+    _isLoading = true;
+    _errorMessage = null;
+    notifyListeners();
+
+    try {
+      final response = await _authRepository.login(email, password);
+
+      if (response['token'] != null && response['user'] != null) {
+        _user = UserModel.fromJson(response['user']);
+        return true;
+      } else {
+        _errorMessage = response['message'] ?? 'Login failed: Token or user data not found';
+        return false;
+      }
+    } catch (e) {
+      _errorMessage = 'Login error: $e';
+      return false;
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
+  Future<void> logout() async {
+    await _authRepository.logout();
+    _user = null;
+    notifyListeners();
+  }
+}
+
+
+// === File: .\my_app\lib\presentation\screens\home_screen.dart ===
+import 'package:flutter/material.dart';
+import 'package:my_app/presentation/screens/lost_and_found/lost_and_found_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/domain/providers/auth_provider.dart';
+import 'package:my_app/presentation/widgets/custom_feature_card.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'login_and_register/login_screen.dart';
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context);
+
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Colors.blueAccent, Colors.white],
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          title: const Text(
+            'Campus App',
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.person, color: Colors.white),
+              onPressed: () {
+                Navigator.pushNamed(context, '/profile');
+              },
+            ),
+          ],
+        ),
+        body: GridView.count(
+          crossAxisCount: 2,
+          padding: const EdgeInsets.all(16.0),
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          children: [
+            CustomFeatureCard(
+              icon: Icons.explore,
+              title: 'Campus Explore',
+              onTap: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Campus Explore - To be implemented'),
+                  ),
+                );
+              },
+              animationDuration: const Duration(milliseconds: 500),
+            ),
+            CustomFeatureCard(
+              icon: Icons.local_hospital,
+              title: 'Blood Bank',
+              onTap: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Blood Bank - To be implemented'),
+                  ),
+                );
+              },
+              animationDuration: const Duration(milliseconds: 600),
+            ),
+            CustomFeatureCard(
+              icon: Icons.search,
+              title: 'Lost and Found',
+              onTap: () {
+                if (authProvider.isLoggedIn) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LostAndFoundHubScreen(),
+                    ),
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ),
+                  );
+                }
+              },
+              animationDuration: const Duration(milliseconds: 700),
+            ),
+            CustomFeatureCard(
+              icon: Icons.report,
+              title: 'Report to Admin',
+              onTap: () {
+                if (authProvider.isLoggedIn) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Report to Admin - To be implemented'),
+                    ),
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ),
+                  );
+                }
+              },
+              animationDuration: const Duration(milliseconds: 800),
+            ),
+             // Add a test button
+            CustomFeatureCard(
+              icon: Icons.settings,
+              title: 'Test Fetch',
+              onTap: () {
+                Navigator.pushNamed(context, '/test-fetch');
+              },
+              animationDuration: const Duration(milliseconds: 900),
+            ),
+             // Add a test button
+            CustomFeatureCard(
+              icon: Icons.settings,
+              title: 'Test Fetch2',
+              onTap: () {
+                Navigator.pushNamed(context, '/test-fetch2');
+              },
+              animationDuration: const Duration(milliseconds: 900),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+ 
+
+
+// === File: .\my_app\lib\presentation\screens\splash_screen.dart ===
+import 'package:flutter/material.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin {
+  late AnimationController _fadeController;
+  late AnimationController _bounceController;
+  late AnimationController _pulseController;
+  late Animation<double> _fadeAnimation;
+  late Animation<double> _bounceAnimation;
+  late Animation<double> _pulseAnimation;
+  bool _isTapped = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Fade animation for the app name/logo
+    _fadeController = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    );
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _fadeController, curve: Curves.easeIn),
+    );
+
+    // Bounce animation for the icon
+    _bounceController = AnimationController(
+      duration: const Duration(milliseconds: 1000),
+      vsync: this,
+    );
+    _bounceAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _bounceController, curve: Curves.elasticOut),
+    );
+
+    // Pulse animation for the "Tap to Continue" text
+    _pulseController = AnimationController(
+      duration: const Duration(milliseconds: 800),
+      vsync: this,
+    )..repeat(reverse: true);
+    _pulseAnimation = Tween<double>(begin: 0.8, end: 1.0).animate(
+      CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
+    );
+
+    // Start animations
+    _fadeController.forward();
+    _bounceController.forward();
+
+    // Navigate to HomeScreen after 5 seconds or on tap
+    Future.delayed(const Duration(seconds: 5), () {
+      if (!_isTapped && mounted) {
+        _navigateToHome();
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _fadeController.dispose();
+    _bounceController.dispose();
+    _pulseController.dispose();
+    super.dispose();
+  }
+
+  void _navigateToHome() {
+    if (!_isTapped) {
+      setState(() {
+        _isTapped = true;
+      });
+      Navigator.pushReplacementNamed(context, '/home');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: GestureDetector(
+        onTap: _navigateToHome,
+        child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Colors.blueAccent, Colors.lightBlue],
+            ),
+          ),
+          child: Stack(
+            children: [
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // Animated App Name/Logo
+                    FadeTransition(
+                      opacity: _fadeAnimation,
+                      child: const Text(
+                        'Campus App',
+                        style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          shadows: [
+                            Shadow(
+                              blurRadius: 10.0,
+                              color: Colors.black26,
+                              offset: Offset(2.0, 2.0),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    // Animated Icon
+                    ScaleTransition(
+                      scale: _bounceAnimation,
+                      child: const Icon(
+                        Icons.school,
+                        size: 80,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                    // Pulsing "Tap to Continue" Text
+                    ScaleTransition(
+                      scale: _pulseAnimation,
+                      child: const Text(
+                        'Tap to Continue',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white70,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              // Circular Progress Indicator at the bottom
+              Positioned(
+                bottom: 50,
+                left: 0,
+                right: 0,
+                child: Center(
+                  child: SizedBox(
+                    width: 40,
+                    height: 40,
+                    child: CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                      strokeWidth: 3,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\presentation\screens\test_fetch_screen.dart ===
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/domain/providers/auth_provider.dart';
+
+class TestFetchScreen extends StatefulWidget {
+  const TestFetchScreen({Key? key}) : super(key: key);
+
+  @override
+  _TestFetchScreenState createState() => _TestFetchScreenState();
+}
+
+class _TestFetchScreenState extends State<TestFetchScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Fetch data when the screen loads
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final authProvider = Provider.of<AuthProvider>(context, listen: false);
+      authProvider.fetchUniversities();
+      authProvider.fetchAcademicUnits(1); // Use a sample university ID (e.g., 1)
+      authProvider.fetchTeacherDesignations();
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Test Fetch Screen'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: authProvider.isLoading
+            ? const Center(child: CircularProgressIndicator())
+            : SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Universities:',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 8),
+                    if (authProvider.universities.isNotEmpty)
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: authProvider.universities.length,
+                        itemBuilder: (context, index) {
+                          final university = authProvider.universities[index];
+                          return ListTile(
+                            title: Text(university.name),
+                            subtitle: Text('ID: ${university.id}'),
+                          );
+                        },
+                      )
+                    else if (authProvider.errorMessage != null)
+                      Text(
+                        'Error: ${authProvider.errorMessage}',
+                        style: const TextStyle(color: Colors.red),
+                      )
+                    else
+                      const Text('No universities fetched yet.'),
+
+                    const SizedBox(height: 16),
+                    const Text(
+                      'Academic Units:',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 8),
+                    if (authProvider.academicUnits.isNotEmpty)
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: authProvider.academicUnits.length,
+                        itemBuilder: (context, index) {
+                          final unit = authProvider.academicUnits[index];
+                          return ListTile(
+                            title: Text(unit.name),
+                            subtitle: Text('ID: ${unit.id}, University ID: ${unit.universityId}'),
+                          );
+                        },
+                      )
+                    else if (authProvider.errorMessage != null)
+                      Text(
+                        'Error: ${authProvider.errorMessage}',
+                        style: const TextStyle(color: Colors.red),
+                      )
+                    else
+                      const Text('No academic units fetched yet.'),
+
+                    const SizedBox(height: 16),
+                    const Text(
+                      'Teacher Designations:',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 8),
+                    if (authProvider.teacherDesignations.isNotEmpty)
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: authProvider.teacherDesignations.length,
+                        itemBuilder: (context, index) {
+                          final designation = authProvider.teacherDesignations[index];
+                          return ListTile(
+                            title: Text(designation.name),
+                            subtitle: Text('ID: ${designation.id}'),
+                          );
+                        },
+                      )
+                    else if (authProvider.errorMessage != null)
+                      Text(
+                        'Error: ${authProvider.errorMessage}',
+                        style: const TextStyle(color: Colors.red),
+                      )
+                    else
+                      const Text('No teacher designations fetched yet.'),
+                  ],
+                ),
+              ),
+      ),
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\presentation\screens\test_fetch_screen2.dart ===
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/domain/providers/auth_provider.dart';
+import 'package:my_app/presentation/services/api_service.dart';
+import 'package:my_app/data/models/lost_and_found_item.dart';
+import 'dart:developer' as developer;
+
+class TestFetchScreen2 extends StatefulWidget {
+  const TestFetchScreen2({Key? key}) : super(key: key);
+
+  @override
+  _TestFetchScreenState createState() => _TestFetchScreenState();
+}
+
+class _TestFetchScreenState extends State<TestFetchScreen2> {
+  List<LostAndFoundItem> _lostItems = [];
+  List<LostAndFoundItem> _foundItems = [];
+  String? _lostItemsError;
+  String? _foundItemsError;
+
+  @override
+  void initState() {
+    super.initState();
+    // Fetch data when the screen loads
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final authProvider = Provider.of<AuthProvider>(context, listen: false);
+      authProvider.fetchUniversities();
+      authProvider.fetchAcademicUnits(1); // Use a sample university ID (e.g., 1)
+      authProvider.fetchTeacherDesignations();
+      _fetchLostAndFoundItems();
+    });
+  }
+
+  Future<void> _fetchLostAndFoundItems() async {
+    try {
+      developer.log('Fetching lost items...');
+      final lostItems = await ApiService.fetchLostAndFoundItems('lost');
+      setState(() {
+        _lostItems = lostItems;
+      });
+      developer.log('Lost items fetched: ${_lostItems.length} items');
+    } catch (e) {
+      setState(() {
+        _lostItemsError = 'Failed to load lost items: $e';
+      });
+      developer.log('Lost items fetch error: $_lostItemsError');
+    }
+
+    try {
+      developer.log('Fetching found items...');
+      final foundItems = await ApiService.fetchLostAndFoundItems('found');
+      setState(() {
+        _foundItems = foundItems;
+      });
+      developer.log('Found items fetched: ${_foundItems.length} items');
+    } catch (e) {
+      setState(() {
+        _foundItemsError = 'Failed to load found items: $e';
+      });
+      developer.log('Found items fetch error: $_foundItemsError');
+    }
+  }
+
+  void _refreshData() {
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+    authProvider.fetchUniversities();
+    authProvider.fetchAcademicUnits(1);
+    authProvider.fetchTeacherDesignations();
+    _fetchLostAndFoundItems();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Test Fetch Screen'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _refreshData,
+          ),
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: authProvider.isLoading && _lostItems.isEmpty && _foundItems.isEmpty
+            ? const Center(child: CircularProgressIndicator())
+            : SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Universities Section
+                    const Text(
+                      'Universities:',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 8),
+                    if (authProvider.universities.isNotEmpty)
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: authProvider.universities.length,
+                        itemBuilder: (context, index) {
+                          final university = authProvider.universities[index];
+                          return ListTile(
+                            title: Text(university.name),
+                            subtitle: Text('ID: ${university.id}'),
+                          );
+                        },
+                      )
+                    else if (authProvider.errorMessage != null)
+                      Text(
+                        'Error: ${authProvider.errorMessage}',
+                        style: const TextStyle(color: Colors.red),
+                      )
+                    else
+                      const Text('No universities fetched yet.'),
+
+                    const SizedBox(height: 16),
+                    // Academic Units Section
+                    const Text(
+                      'Academic Units:',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 8),
+                    if (authProvider.academicUnits.isNotEmpty)
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: authProvider.academicUnits.length,
+                        itemBuilder: (context, index) {
+                          final unit = authProvider.academicUnits[index];
+                          return ListTile(
+                            title: Text(unit.name),
+                            subtitle: Text('ID: ${unit.id}, University ID: ${unit.universityId}'),
+                          );
+                        },
+                      )
+                    else if (authProvider.errorMessage != null)
+                      Text(
+                        'Error: ${authProvider.errorMessage}',
+                        style: const TextStyle(color: Colors.red),
+                      )
+                    else
+                      const Text('No academic units fetched yet.'),
+
+                    const SizedBox(height: 16),
+                    // Teacher Designations Section
+                    const Text(
+                      'Teacher Designations:',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 8),
+                    if (authProvider.teacherDesignations.isNotEmpty)
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: authProvider.teacherDesignations.length,
+                        itemBuilder: (context, index) {
+                          final designation = authProvider.teacherDesignations[index];
+                          return ListTile(
+                            title: Text(designation.name),
+                            subtitle: Text('ID: ${designation.id}'),
+                          );
+                        },
+                      )
+                    else if (authProvider.errorMessage != null)
+                      Text(
+                        'Error: ${authProvider.errorMessage}',
+                        style: const TextStyle(color: Colors.red),
+                      )
+                    else
+                      const Text('No teacher designations fetched yet.'),
+
+                    const SizedBox(height: 16),
+                    // Lost Items Section
+                    const Text(
+                      'Lost Items:',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 8),
+                    if (_lostItems.isNotEmpty)
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: _lostItems.length,
+                        itemBuilder: (context, index) {
+                          final item = _lostItems[index];
+                          return ListTile(
+                            title: Text(item.title),
+                            subtitle: Text('ID: ${item.id}, Category: ${item.title}'), // Fixed to use title instead of category
+                          );
+                        },
+                      )
+                    else if (_lostItemsError != null)
+                      Text(
+                        'Error: $_lostItemsError',
+                        style: const TextStyle(color: Colors.red),
+                      )
+                    else
+                      const Text('No lost items fetched yet.'),
+
+                    const SizedBox(height: 16),
+                    // Found Items Section
+                    const Text(
+                      'Found Items:',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 8),
+                    if (_foundItems.isNotEmpty)
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: _foundItems.length,
+                        itemBuilder: (context, index) {
+                          final item = _foundItems[index];
+                          return ListTile(
+                            title: Text(item.title),
+                            subtitle: Text('ID: ${item.id}, Category: ${item.title}'), // Fixed to use title instead of category
+                          );
+                        },
+                      )
+                    else if (_foundItemsError != null)
+                      Text(
+                        'Error: $_foundItemsError',
+                        style: const TextStyle(color: Colors.red),
+                      )
+                    else
+                      const Text('No found items fetched yet.'),
+                  ],
+                ),
+              ),
+      ),
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\presentation\screens\blood_bank\blood_bank_screen.dart ===
+
+
+
+// === File: .\my_app\lib\presentation\screens\login_and_register\login_screen.dart ===
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/domain/providers/auth_provider.dart';
+import 'package:my_app/presentation/widgets/custom_text_field.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
+
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  final _formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final storage = const FlutterSecureStorage();
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context);
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Login')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              CustomTextField(
+                controller: _emailController,
+                labelText: 'Email',
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your email';
+                  }
+                  if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
+                    return 'Please enter a valid email';
+                  }
+                  return null;
+                },
+                obscureText: false,
+              ),
+              const SizedBox(height: 16),
+              CustomTextField(
+                controller: _passwordController,
+                labelText: 'Password',
+                obscureText: true,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your password';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 20),
+              authProvider.isLoading
+                  ? const CircularProgressIndicator()
+                  : ElevatedButton(
+                      onPressed: () async {
+                        if (_formKey.currentState!.validate()) {
+                          final success = await authProvider.login(
+                            _emailController.text,
+                            _passwordController.text,
+                          );
+                          if (success) {
+                            // Retrieve the stored token
+                            final token = await storage.read(key: 'auth_token');
+                            print('Retrieved token: $token');
+                            if (token != null) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Login successful')),
+                              );
+                              // Navigate to home screen with the token
+                              Navigator.pushReplacementNamed(
+                                context,
+                                '/home',
+                                arguments: token,
+                              );
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Token not found after login')),
+                              );
+                            }
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text(authProvider.errorMessage ?? 'Login failed')),
+                            );
+                          }
+                        }
+                      },
+                      child: const Text('Login'),
+                    ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/register');
+                },
+                child: const Text('Don\'t have an account? Register'),
+              ),
+              if (authProvider.errorMessage != null)
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Text(
+                    authProvider.errorMessage!,
+                    style: const TextStyle(color: Colors.red),
+                  ),
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\presentation\screens\login_and_register\register_screen.dart ===
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/domain/providers/auth_provider.dart';
+import 'package:my_app/data/models/university_model.dart';
+import 'package:my_app/data/models/academic_unit_model.dart';
+import 'package:my_app/data/models/teacher_designation_model.dart'; // Assume this model exists
+import 'package:my_app/presentation/widgets/custom_text_field.dart';
+
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
+
+  @override
+  _RegisterScreenState createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  final _formKey = GlobalKey<FormState>();
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
+  final _phoneController = TextEditingController();
+  final _bloodGroupController = TextEditingController();
+  String _role = 'student';
+  int? _selectedUniversityId;
+  int? _selectedAcademicUnitId;
+  int? _selectedTeacherDesignationId; // Changed to store ID
+
+  @override
+  void initState() {
+    super.initState();
+    // Fetch universities and teacher designations when screen loads
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final authProvider = Provider.of<AuthProvider>(context, listen: false);
+      authProvider.fetchUniversities();
+      authProvider.fetchTeacherDesignations(); // Assume this method exists
+    });
+  }
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+    _confirmPasswordController.dispose();
+    _phoneController.dispose();
+    _bloodGroupController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context);
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Register')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                CustomTextField(
+                  controller: _nameController,
+                  labelText: 'Name',
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your name';
+                    }
+                    return null;
+                  },
+                  obscureText: false,
+                ),
+                const SizedBox(height: 16),
+                CustomTextField(
+                  controller: _emailController,
+                  labelText: 'Email',
+                  keyboardType: TextInputType.emailAddress,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your email';
+                    }
+                    if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
+                      return 'Please enter a valid email';
+                    }
+                    return null;
+                  },
+                  obscureText: false,
+                ),
+                const SizedBox(height: 16),
+                CustomTextField(
+                  controller: _passwordController,
+                  labelText: 'Password',
+                  obscureText: true,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your password';
+                    }
+                    if (value.length < 8) {
+                      return 'Password must be at least 8 characters';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                CustomTextField(
+                  controller: _confirmPasswordController,
+                  labelText: 'Confirm Password',
+                  obscureText: true,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please confirm your password';
+                    }
+                    if (value != _passwordController.text) {
+                      return 'Passwords do not match';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                CustomTextField(
+                  controller: _phoneController,
+                  labelText: 'Phone',
+                  keyboardType: TextInputType.phone,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your phone number';
+                    }
+                    if (!RegExp(r'^\+\d{10,15}$').hasMatch(value)) {
+                      return 'Please enter a valid phone number (e.g., +1234567890)';
+                    }
+                    return null;
+                  },
+                  obscureText: false,
+                ),
+                const SizedBox(height: 16),
+                CustomTextField(
+                  controller: _bloodGroupController,
+                  labelText: 'Blood Group',
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your blood group';
+                    }
+                    if (!['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'].contains(value)) {
+                      return 'Please enter a valid blood group';
+                    }
+                    return null;
+                  },
+                  obscureText: false,
+                ),
+                const SizedBox(height: 16),
+                DropdownButtonFormField<int>(
+                  value: _selectedUniversityId,
+                  decoration: const InputDecoration(
+                    labelText: 'University',
+                    border: OutlineInputBorder(),
+                  ),
+                  items: authProvider.universities
+                      .map((university) => DropdownMenuItem(
+                            value: university.id,
+                            child: Text(university.name),
+                          ))
+                      .toList(),
+                  onChanged: (value) async {
+                    setState(() {
+                      _selectedUniversityId = value;
+                      _selectedAcademicUnitId = null; // Reset academic unit
+                    });
+                    if (value != null) {
+                      await authProvider.fetchAcademicUnits(value);
+                    }
+                  },
+                  validator: (value) {
+                    if (value == null) {
+                      return 'Please select a university';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                DropdownButtonFormField<int>(
+                  value: _selectedAcademicUnitId,
+                  decoration: const InputDecoration(
+                    labelText: 'Academic Unit',
+                    border: OutlineInputBorder(),
+                  ),
+                  items: _selectedUniversityId == null
+                      ? []
+                      : authProvider.academicUnits
+                          .where((unit) => unit.universityId == _selectedUniversityId)
+                          .map((unit) => DropdownMenuItem(
+                                value: unit.id,
+                                child: Text(unit.name),
+                              ))
+                          .toList(),
+                  onChanged: (value) {
+                    setState(() {
+                      _selectedAcademicUnitId = value;
+                    });
+                  },
+                  validator: (value) {
+                    if (value == null && _selectedUniversityId != null) {
+                      return 'Please select an academic unit';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                DropdownButtonFormField<String>(
+                  value: _role,
+                  decoration: const InputDecoration(
+                    labelText: 'Role',
+                    border: OutlineInputBorder(),
+                  ),
+                  items: ['student', 'teacher', 'officer', 'staff']
+                      .map((role) => DropdownMenuItem(
+                            value: role,
+                            child: Text(role),
+                          ))
+                      .toList(),
+                  onChanged: (value) {
+                    setState(() {
+                      _role = value!;
+                      _selectedTeacherDesignationId = null; // Reset teacher designation
+                    });
+                  },
+                  validator: (value) {
+                    if (value == null) {
+                      return 'Please select a role';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
+                // Conditionally show teacher_designation dropdown for "teacher" role
+                if (_role == 'teacher')
+                  DropdownButtonFormField<int>(
+                    value: _selectedTeacherDesignationId,
+                    decoration: const InputDecoration(
+                      labelText: 'Teacher Designation',
+                      border: OutlineInputBorder(),
+                    ),
+                    items: authProvider.teacherDesignations
+                        .map((designation) => DropdownMenuItem(
+                              value: designation.id,
+                              child: Text(designation.name),
+                            ))
+                        .toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        _selectedTeacherDesignationId = value;
+                      });
+                    },
+                    validator: (value) {
+                      if (_role == 'teacher' && value == null) {
+                        return 'Please select a teacher designation';
+                      }
+                      return null;
+                    },
+                  ),
+                const SizedBox(height: 20),
+                authProvider.isLoading
+                    ? const CircularProgressIndicator()
+                    : ElevatedButton(
+                        onPressed: () async {
+                          if (_formKey.currentState!.validate()) {
+                            await authProvider.register(
+                              name: _nameController.text,
+                              email: _emailController.text,
+                              password: _passwordController.text,
+                              confirmPassword: _confirmPasswordController.text,
+                              phone: _phoneController.text,
+                              bloodGroup: _bloodGroupController.text,
+                              role: _role,
+                              university: _selectedUniversityId!,
+                              academicUnit: _selectedAcademicUnitId!,
+                              teacherDesignation: _role == 'teacher' ? _selectedTeacherDesignationId : null,
+                            );
+                            if (authProvider.errorMessage == null) {
+                              Navigator.pushNamed(
+                                context,
+                                '/verify-email',
+                                arguments: _emailController.text,
+                              );
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text(authProvider.errorMessage!)),
+                              );
+                            }
+                          }
+                        },
+                        child: const Text('Register'),
+                      ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
+                  child: const Text('Already have an account? Login'),
+                ),
+                if (authProvider.errorMessage != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: Text(
+                      authProvider.errorMessage!,
+                      style: const TextStyle(color: Colors.red),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\presentation\screens\login_and_register\verify_email_screen.dart ===
+
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/domain/providers/auth_provider.dart';
+import 'package:my_app/presentation/widgets/custom_text_field.dart';
+
+class VerifyEmailScreen extends StatefulWidget {
+  const VerifyEmailScreen({Key? key}) : super(key: key);
+
+  @override
+  _VerifyEmailScreenState createState() => _VerifyEmailScreenState();
+}
+
+class _VerifyEmailScreenState extends State<VerifyEmailScreen> {
+  final _formKey = GlobalKey<FormState>();
+  final _codeController = TextEditingController();
+
+  @override
+  void dispose() {
+    _codeController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context);
+    final String email = ModalRoute.of(context)!.settings.arguments as String;
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Verify Email')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              Text(
+                'A verification code has been sent to $email',
+                style: const TextStyle(fontSize: 16),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 16),
+              CustomTextField(
+                controller: _codeController,
+                labelText: 'Verification Code',
+                keyboardType: TextInputType.number,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter the verification code';
+                  }
+                  if (!RegExp(r'^\d{6}$').hasMatch(value)) {
+                    return 'Please enter a valid 6-digit code';
+                  }
+                  return null;
+                }, obscureText: true,
+              ),
+              const SizedBox(height: 20),
+              authProvider.isLoading
+                  ? const CircularProgressIndicator()
+                  : ElevatedButton(
+                      onPressed: () async {
+                        if (_formKey.currentState!.validate()) {
+                          final success = await authProvider.verifyEmail(
+                            email,
+                            _codeController.text,
+                          );
+                          if (success) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('Email verified successfully')),
+                            );
+                            Navigator.pushReplacementNamed(context, '/login');
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text(authProvider.errorMessage ?? 'Verification failed')),
+                            );
+                          }
+                        }
+                      },
+                      child: const Text('Verify Email'),
+                    ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+                child: const Text('Back to Login'),
+              ),
+              if (authProvider.errorMessage != null)
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Text(
+                    authProvider.errorMessage!,
+                    style: const TextStyle(color: Colors.red),
+                  ),
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+// === File: .\my_app\lib\presentation\screens\lost_and_found\item_detail_screen.dart ===
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/domain/providers/auth_provider.dart';
+import 'package:my_app/presentation/services/api_service.dart';
+import 'package:my_app/data/models/lost_and_found_item.dart';
+import 'package:my_app/data/models/claim.dart';
+import 'package:my_app/presentation/widgets/custom_text_field.dart';
+
+class ItemDetailScreen extends StatefulWidget {
+  final LostAndFoundItem item;
+
+  const ItemDetailScreen({Key? key, required this.item}) : super(key: key);
+
+  @override
+  _ItemDetailScreenState createState() => _ItemDetailScreenState();
+}
+
+class _ItemDetailScreenState extends State<ItemDetailScreen> {
+  bool _isLoading = false;
+  final _claimDescriptionController = TextEditingController();
+  bool _isResolved = false;
+  bool _hasClaimed = false;
+  String _currentStatus = ''; // Track the current status locally
+
+  @override
+  void initState() {
+    super.initState();
+    _currentStatus = widget.item.status; // Initialize with the item's status
+    _checkIfClaimed();
+  }
+
+  Future<void> _checkIfClaimed() async {
+    try {
+      final authProvider = Provider.of<AuthProvider>(context, listen: false);
+      final currentUserId = authProvider.user?.id;
+      if (currentUserId != null && widget.item.claimsUrl.isNotEmpty) {
+        final claims = await ApiService.fetchClaims(
+            widget.item.postType == 'lost' ? 'lost' : 'found', widget.item.id);
+        setState(() {
+          _hasClaimed = claims.any((claim) => claim.claimant.id == currentUserId);
+        });
+      }
+    } catch (e) {
+      print('Error checking claims: $e');
+    }
+  }
+
+  Future<void> _createClaim() async {
+    if (_claimDescriptionController.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Claim description is required')),
+      );
+      return;
+    }
+
+    setState(() => _isLoading = true);
+    try {
+      final data = {
+        widget.item.postType == 'lost' ? 'lost_item' : 'found_item': widget.item.id,
+        'description': _claimDescriptionController.text,
+      };
+      await ApiService.createClaim(
+          widget.item.postType == 'lost' ? 'lost' : 'found', data);
+
+      // Update the item's status to 'claimed'
+      final updateData = {
+        'status': 'claimed',
+      };
+      await ApiService.updateItem(
+          widget.item.postType == 'lost' ? 'lost' : 'found', widget.item.id, updateData);
+
+      setState(() {
+        _hasClaimed = true; // Prevent further claims
+        _currentStatus = 'claimed'; // Update local status
+      });
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Claim submitted successfully')),
+      );
+      await Future.delayed(Duration(seconds: 1));
+      Navigator.pop(context);
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error submitting claim: $e')),
+      );
+    } finally {
+      setState(() => _isLoading = false);
+    }
+  }
+
+  Future<void> _resolveItem() async {
+    setState(() => _isLoading = true);
+    try {
+      final authProvider = Provider.of<AuthProvider>(context, listen: false);
+      final data = {
+        'status': widget.item.postType == 'lost' ? 'found' : 'returned',
+        'resolved_by': authProvider.user?.id,
+      };
+      await ApiService.resolveItem(
+          widget.item.postType == 'lost' ? 'lost' : 'found', widget.item.id, data);
+      setState(() {
+        _isResolved = true;
+        _currentStatus = widget.item.postType == 'lost' ? 'found' : 'returned';
+      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Item resolved successfully')),
+      );
+      await Future.delayed(Duration(seconds: 1));
+      Navigator.pop(context);
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error resolving item: $e')),
+      );
+    } finally {
+      setState(() => _isLoading = false);
+    }
+  }
+
+  @override
+  void dispose() {
+    _claimDescriptionController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context);
+    final isOwner = authProvider.user?.id == widget.item.user.id;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.item.title),
+        backgroundColor: Colors.blueAccent,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView(
+          children: [
+            if (widget.item.media.isNotEmpty)
+              Image.network(
+                widget.item.media.first.fileUrl,
+                height: 200,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) =>
+                    Icon(Icons.image_not_supported),
+              ),
+            const SizedBox(height: 16),
+            Text(
+              widget.item.title,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              widget.item.description,
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Location: ${widget.item.location}',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              widget.item.postType == 'lost'
+                  ? 'Lost Date: ${widget.item.lostDate ?? "N/A"}'
+                  : 'Found Date: ${widget.item.foundDate ?? "N/A"}',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Approximate Time: ${widget.item.approximateTime}',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Status: ${_isResolved ? (widget.item.postType == "lost" ? "Found" : "Returned") : _currentStatus}',
+              style: TextStyle(fontSize: 16, color: _isResolved ? Colors.green : (_currentStatus == 'claimed' ? Colors.orange : null)),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Approval Status: ${widget.item.approvalStatus}',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 16),
+            if (isOwner && _currentStatus == 'open' && !_isResolved && widget.item.approvalStatus == 'approved')
+              ElevatedButton(
+                onPressed: _isLoading ? null : _resolveItem,
+                child: Text('Resolve Item'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                ),
+              ),
+            if (!isOwner && _currentStatus == 'open' && widget.item.approvalStatus == 'approved' && !_hasClaimed) ...[
+              CustomTextField(
+                controller: _claimDescriptionController,
+                labelText: 'Claim Description',
+                obscureText: false,
+                validator: (value) =>
+                    value!.isEmpty ? 'Description is required' : null,
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: _isLoading ? null : _createClaim,
+                child: Text('Submit Claim'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueAccent,
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\presentation\screens\lost_and_found\lost_and_found_screen.dart ===
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/domain/providers/auth_provider.dart';
+import 'package:my_app/presentation/services/api_service.dart';
+import 'package:my_app/data/models/lost_and_found_item.dart';
+import 'package:my_app/data/models/claim.dart';
+import 'package:my_app/presentation/screens/lost_and_found/report_lost_found_screen.dart';
+import 'package:my_app/presentation/screens/lost_and_found/item_detail_screen.dart';
+
+class LostAndFoundHubScreen extends StatefulWidget {
+  const LostAndFoundHubScreen({Key? key}) : super(key: key);
+
+  @override
+  _LostAndFoundHubScreenState createState() => _LostAndFoundHubScreenState();
+}
+
+class _LostAndFoundHubScreenState extends State<LostAndFoundHubScreen> {
+  String _selectedFilter = 'all';
+  String _searchQuery = '';
+  bool _isLoading = false;
+  List<LostAndFoundItem> _items = [];
+  List<Claim> _claims = [];
+  List<LostAndFoundItem> _claimedItems = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchItems();
+  }
+
+  Future<void> _fetchItems() async {
+    setState(() => _isLoading = true);
+    try {
+      final authProvider = Provider.of<AuthProvider>(context, listen: false);
+      if (!authProvider.isLoggedIn) {
+        Navigator.pushNamed(context, '/login');
+        return;
+      }
+
+      final currentUserId = authProvider.user?.id;
+
+      if (_selectedFilter == 'all') {
+        final allItems = await ApiService.fetchLostAndFoundItems('all');
+        _items = allItems.where((item) {
+          if (item.user.id != currentUserId) {
+            return item.approvalStatus == 'approved';
+          }
+          return true;
+        }).toList();
+      } else if (_selectedFilter == 'lost') {
+        final lostItems = await ApiService.fetchLostAndFoundItems('lost');
+        _items = lostItems.where((item) {
+          if (item.user.id != currentUserId) {
+            return item.approvalStatus == 'approved';
+          }
+          return true;
+        }).toList();
+      } else if (_selectedFilter == 'found') {
+        final foundItems = await ApiService.fetchLostAndFoundItems('found');
+        _items = foundItems.where((item) {
+          if (item.user.id != currentUserId) {
+            return item.approvalStatus == 'approved';
+          }
+          return true;
+        }).toList();
+      } else if (_selectedFilter == 'my-posts') {
+        _items = await ApiService.fetchLostAndFoundItems('my-posts');
+      } else if (_selectedFilter == 'my-claims') {
+        // Fetch items the user has claimed
+        final claimedItems = await ApiService.fetchLostAndFoundItems('my-claims');
+        _claimedItems = claimedItems;
+        List<Claim> allClaims = [];
+        for (var item in claimedItems) {
+          if (item.claimsUrl.isNotEmpty) {
+            // Fetch all claims for the item, not just the user's claims
+            final itemClaims = await ApiService.fetchClaims(
+                item.postType == 'lost' ? 'lost' : 'found', item.id);
+            allClaims.addAll(itemClaims);
+          }
+        }
+        _claims = allClaims;
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error fetching items: $e')),
+      );
+    } finally {
+      setState(() => _isLoading = false);
+    }
+  }
+
+  List<LostAndFoundItem> _filteredItems() {
+    if (_searchQuery.isEmpty) return _items;
+    return _items.where((item) {
+      return item.title.toLowerCase().contains(_searchQuery.toLowerCase()) ||
+          item.description.toLowerCase().contains(_searchQuery.toLowerCase());
+    }).toList();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Lost and Found Hub'),
+        backgroundColor: Colors.blueAccent,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const ReportLostFoundScreen()),
+          ).then((_) => _fetchItems());
+        },
+        child: const Icon(Icons.add),
+        backgroundColor: Colors.blueAccent,
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              onChanged: (value) {
+                setState(() => _searchQuery = value);
+              },
+              decoration: InputDecoration(
+                labelText: 'Search Items',
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.search),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: DropdownButton<String>(
+              value: _selectedFilter,
+              isExpanded: true,
+              items: [
+                DropdownMenuItem(value: 'all', child: Text('All Items')),
+                DropdownMenuItem(value: 'lost', child: Text('Lost Items')),
+                DropdownMenuItem(value: 'found', child: Text('Found Items')),
+                DropdownMenuItem(value: 'my-posts', child: Text('My Posts')),
+                DropdownMenuItem(value: 'my-claims', child: Text('My Claims')),
+              ],
+              onChanged: (value) {
+                setState(() {
+                  _selectedFilter = value!;
+                  _items = [];
+                  _claims = [];
+                  _claimedItems = [];
+                  _fetchItems();
+                });
+              },
+            ),
+          ),
+          Expanded(
+            child: _isLoading
+                ? Center(child: CircularProgressIndicator())
+                : _selectedFilter == 'my-claims'
+                    ? ListView.builder(
+                        itemCount: _claims.length,
+                        itemBuilder: (context, index) {
+                          final claim = _claims[index];
+                          final item = _claimedItems.firstWhere(
+                            (item) => item.id == (claim.lostItemId ?? claim.foundItemId),
+                            orElse: () => LostAndFoundItem(
+                              id: -1,
+                              user: User(id: -1, name: 'Unknown', detailUrl: ''),
+                              title: 'Unknown Item',
+                              description: 'Item not found',
+                              approximateTime: 'N/A',
+                              location: 'N/A',
+                              status: 'N/A',
+                              approvalStatus: 'N/A',
+                              createdAt: DateTime.now(),
+                              updatedAt: DateTime.now(),
+                              media: [],
+                              postType: 'N/A',
+                              isAdmin: false,
+                              detailUrl: '',
+                              claimsUrl: '',
+                            ),
+                          );
+                          return Card(
+                            margin: EdgeInsets.all(8.0),
+                            child: ListTile(
+                              title: Text('Claim for: ${item.title}'),
+                              subtitle: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Claim Description: ${claim.description}'),
+                                  Text('Claimant: ${claim.claimant.name}'),
+                                  Text('Item Description: ${item.description}'),
+                                  Text('Claim Status: ${claim.status}'),
+                                ],
+                              ),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => ItemDetailScreen(item: item),
+                                  ),
+                                ).then((_) => _fetchItems());
+                              },
+                            ),
+                          );
+                        },
+                      )
+                    : ListView.builder(
+                        itemCount: _filteredItems().length,
+                        itemBuilder: (context, index) {
+                          final item = _filteredItems()[index];
+                          return Card(
+                            margin: EdgeInsets.all(8.0),
+                            child: ListTile(
+                              leading: item.media.isNotEmpty
+                                  ? Image.network(
+                                      item.media.first.fileUrl,
+                                      width: 50,
+                                      height: 50,
+                                      fit: BoxFit.cover,
+                                      errorBuilder: (context, error, stackTrace) =>
+                                          Icon(Icons.image_not_supported),
+                                    )
+                                  : Icon(Icons.image_not_supported),
+                              title: Text(item.title),
+                              subtitle: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(item.description),
+                                  if (_selectedFilter == 'my-posts')
+                                    Text(
+                                      'Approval Status: ${item.approvalStatus}',
+                                      style: TextStyle(
+                                        color: item.approvalStatus == 'approved'
+                                            ? Colors.green
+                                            : Colors.orange,
+                                      ),
+                                    ),
+                                ],
+                              ),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        ItemDetailScreen(item: item),
+                                  ),
+                                ).then((_) => _fetchItems());
+                              },
+                            ),
+                          );
+                        },
+                      ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\presentation\screens\lost_and_found\profile_screen.dart ===
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/domain/providers/auth_provider.dart';
+import 'package:my_app/presentation/services/api_service.dart';
+
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
+
+  @override
+  _ProfileScreenState createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _fadeAnimation;
+  late Animation<double> _scaleAnimation;
+
+  Map<String, dynamic>? profileData;
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1000),
+    );
+    _fadeAnimation = CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeInOut,
+    );
+    _scaleAnimation = Tween<double>(
+      begin: 1.0,
+      end: 1.1,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+    _controller.forward();
+
+    fetchProfile();
+  }
+
+  Future<void> fetchProfile() async {
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+    if (authProvider.user != null) {
+      final token = authProvider.user!.token;
+      final userId = authProvider.user!.id;
+      try {
+        final data = await ApiService.fetchProfile(token, userId);
+        setState(() {
+          profileData = data;
+          isLoading = false;
+        });
+      } catch (e) {
+        setState(() {
+          isLoading = false;
+          profileData = null;
+        });
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text('Error fetching profile: $e')));
+      }
+    } else {
+      setState(() {
+        isLoading = false;
+        profileData = null;
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Colors.blueAccent, Colors.white70],
+          stops: [0.0, 0.7],
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          title: const Text(
+            'Profile',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
+              shadows: [
+                Shadow(
+                  color: Colors.black26,
+                  offset: Offset(1, 1),
+                  blurRadius: 2,
+                ),
+              ],
+            ),
+          ),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.settings, color: Colors.white),
+              onPressed: () {
+                Navigator.pushNamed(context, '/login');
+              },
+            ),
+          ],
+        ),
+        body:
+            isLoading
+                ? const Center(child: CircularProgressIndicator())
+                : profileData == null
+                ? const Center(
+                  child: Text("Failed to load profile or not logged in"),
+                )
+                : FadeTransition(
+                  opacity: _fadeAnimation,
+                  child: Center(
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              _controller.forward(from: 0);
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Profile tapped')),
+                              );
+                            },
+                            child: AnimatedBuilder(
+                              animation: _scaleAnimation,
+                              builder: (context, child) {
+                                return Transform.scale(
+                                  scale: _scaleAnimation.value,
+                                  child: Hero(
+                                    tag: 'profileAvatar',
+                                    child: CircleAvatar(
+                                      radius: 70,
+                                      backgroundColor: Colors.white,
+                                      child: CircleAvatar(
+                                        radius: 65,
+                                        backgroundColor: Colors.blueAccent,
+                                        child: Text(
+                                          profileData!['name']
+                                              .toString()
+                                              .substring(0, 1)
+                                              .toUpperCase(),
+                                          style: const TextStyle(
+                                            fontSize: 50,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            shadows: [
+                                              Shadow(
+                                                color: Colors.black38,
+                                                offset: Offset(1, 1),
+                                                blurRadius: 3,
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                          const SizedBox(height: 30),
+                          Card(
+                            elevation: 8,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: Colors.white.withOpacity(0.9),
+                            margin: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Padding(
+                              padding: const EdgeInsets.all(20),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  _buildDetailRow(
+                                    'Name',
+                                    profileData!['name'] ?? 'N/A',
+                                  ),
+                                  const Divider(),
+                                  _buildDetailRow(
+                                    'Email',
+                                    profileData!['email'] ?? 'N/A',
+                                  ),
+                                  const Divider(),
+                                  _buildDetailRow(
+                                    'Phone',
+                                    profileData!['phone'] ?? 'N/A',
+                                  ),
+                                  const Divider(),
+                                  _buildDetailRow(
+                                    'Blood Group',
+                                    profileData!['blood_group'] ?? 'N/A',
+                                  ),
+                                  const Divider(),
+                                  _buildDetailRow(
+                                    'University',
+                                    profileData!['university']?['name'] ??
+                                        'N/A',
+                                  ),
+                                  const Divider(),
+                                  _buildDetailRow(
+                                    'Department',
+                                    profileData!['academic_unit']?['name'] ??
+                                        'N/A',
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 40),
+                          ElevatedButton(
+                            onPressed: () {
+                              if (authProvider.user != null) {
+                                authProvider.logout();
+                                Navigator.pop(context);
+                              } else {
+                                Navigator.pushNamed(context, '/login');
+                              }
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.redAccent,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 40,
+                                vertical: 15,
+                              ),
+                              elevation: 5,
+                              shadowColor: Colors.red.withOpacity(0.5),
+                            ),
+                            child: AnimatedDefaultTextStyle(
+                              duration: const Duration(milliseconds: 200),
+                              style: const TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                shadows: [
+                                  Shadow(
+                                    color: Colors.black26,
+                                    offset: Offset(1, 1),
+                                    blurRadius: 2,
+                                  ),
+                                ],
+                              ),
+                              child: Text(
+                                authProvider.user != null ? 'Logout' : 'Login',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+      ),
+    );
+  }
+
+  Widget _buildDetailRow(String label, String value) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            label,
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              color: Colors.black87,
+            ),
+          ),
+          Flexible(
+            child: Text(
+              value,
+              textAlign: TextAlign.right,
+              style: const TextStyle(fontSize: 18, color: Colors.black54),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+
+// === File: .\my_app\lib\presentation\screens\lost_and_found\report_lost_found_screen.dart ===
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/domain/providers/auth_provider.dart';
+import 'package:my_app/presentation/services/api_service.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
+import 'package:my_app/presentation/widgets/custom_text_field.dart';
+import 'package:my_app/data/models/university_model.dart';
+import 'dart:developer' as developer;
+
+class ReportLostFoundScreen extends StatefulWidget {
+  const ReportLostFoundScreen({Key? key}) : super(key: key);
+
+  @override
+  _ReportLostFoundScreenState createState() => _ReportLostFoundScreenState();
+}
+
+class _ReportLostFoundScreenState extends State<ReportLostFoundScreen> {
+  final _formKey = GlobalKey<FormState>();
+  final _titleController = TextEditingController();
+  final _descriptionController = TextEditingController();
+  final _locationController = TextEditingController();
+  final _dateController = TextEditingController();
+  final _timeController = TextEditingController();
+  String _postType = 'lost';
+  File? _mediaFile;
+  bool _isLoading = false;
+  int? _selectedUniversityId;
+  List<UniversityModel> _universities = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchUniversities();
+  }
+
+  Future<void> _fetchUniversities() async {
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+    if (!authProvider.isLoggedIn) {
+      Navigator.pushNamed(context, '/login');
+      return;
+    }
+    try {
+      await authProvider.fetchUniversities();
+      setState(() {
+        _universities = authProvider.universities;
+        if (_universities.isNotEmpty) {
+          _selectedUniversityId = _universities.first.id; // Default to first university
+        }
+      });
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error fetching universities: $e')),
+      );
+    }
+  }
+
+  Future<void> _pickImage() async {
+    final picker = ImagePicker();
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      setState(() {
+        _mediaFile = File(pickedFile.path);
+      });
+    }
+  }
+
+  Future<void> _submitReport() async {
+    if (!_formKey.currentState!.validate() || _selectedUniversityId == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Please fill all fields and select a university'),
+        ),
+      );
+      return;
+    }
+
+    setState(() => _isLoading = true);
+    try {
+      final authProvider = Provider.of<AuthProvider>(context, listen: false);
+      if (!authProvider.isLoggedIn) {
+        Navigator.pushNamed(context, '/login');
+        return;
+      }
+
+      final data = {
+        'university': _selectedUniversityId.toString(),
+        'title': _titleController.text,
+        'description': _descriptionController.text,
+        'location': _locationController.text,
+        'approximate_time': _timeController.text,
+        if (_postType == 'lost') 'lost_date': _dateController.text,
+        if (_postType == 'found') 'found_date': _dateController.text,
+        'media': _mediaFile,
+      };
+
+      // Log the data being sent
+      developer.log('Submitting report with data: $data', name: 'ReportLostFoundScreen');
+
+      if (_postType == 'lost') {
+        await ApiService.createLostItem(data);
+      } else {
+        await ApiService.createFoundItem(data);
+      }
+
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Item reported successfully')));
+      Navigator.pop(context);
+    } catch (e) {
+      // Log the exception
+      developer.log('Error submitting report: $e', name: 'ReportLostFoundScreen');
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error reporting item: $e')));
+    } finally {
+      setState(() => _isLoading = false);
+    }
+  }
+
+  @override
+  void dispose() {
+    _titleController.dispose();
+    _descriptionController.dispose();
+    _locationController.dispose();
+    _dateController.dispose();
+    _timeController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Report Lost or Found Item'),
+        backgroundColor: Colors.blueAccent,
+      ),
+      body:
+          _universities.isEmpty
+              ? Center(child: CircularProgressIndicator())
+              : Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Form(
+                  key: _formKey,
+                  child: ListView(
+                    children: [
+                      DropdownButtonFormField<int>(
+                        value: _selectedUniversityId,
+                        isExpanded: true,
+                        items:
+                            _universities.map((university) {
+                              return DropdownMenuItem<int>(
+                                value: university.id,
+                                child: Text(university.name),
+                              );
+                            }).toList(),
+                        onChanged: (value) {
+                          setState(() {
+                            _selectedUniversityId = value;
+                          });
+                        },
+                        decoration: InputDecoration(
+                          hintText: 'Select University',
+                          border: OutlineInputBorder(),
+                        ),
+                        validator:
+                            (value) =>
+                                value == null
+                                    ? 'Please select a university'
+                                    : null,
+                      ),
+                      const SizedBox(height: 16),
+                      DropdownButton<String>(
+                        value: _postType,
+                        isExpanded: true,
+                        items: [
+                          DropdownMenuItem(
+                            value: 'lost',
+                            child: Text('Lost Item'),
+                          ),
+                          DropdownMenuItem(
+                            value: 'found',
+                            child: Text('Found Item'),
+                          ),
+                        ],
+                        onChanged: (value) {
+                          setState(() => _postType = value!);
+                        },
+                      ),
+                      const SizedBox(height: 16),
+                      CustomTextField(
+                        controller: _titleController,
+                        labelText: 'Title',
+                        obscureText: false,
+                        validator:
+                            (value) =>
+                                value!.isEmpty ? 'Title is required' : null,
+                      ),
+                      const SizedBox(height: 16),
+                      CustomTextField(
+                        controller: _descriptionController,
+                        labelText: 'Description',
+                        obscureText: false,
+                        validator:
+                            (value) =>
+                                value!.isEmpty
+                                    ? 'Description is required'
+                                    : null,
+                      ),
+                      const SizedBox(height: 16),
+                      CustomTextField(
+                        controller: _locationController,
+                        labelText: 'Location',
+                        obscureText: false,
+                        validator:
+                            (value) =>
+                                value!.isEmpty ? 'Location is required' : null,
+                      ),
+                      const SizedBox(height: 16),
+                      CustomTextField(
+                        controller: _dateController,
+                        labelText:
+                            _postType == 'lost' ? 'Lost Date' : 'Found Date',
+                        obscureText: false,
+                        keyboardType: TextInputType.datetime,
+                        validator:
+                            (value) =>
+                                value!.isEmpty ? 'Date is required' : null,
+                      ),
+                      const SizedBox(height: 16),
+                      CustomTextField(
+                        controller: _timeController,
+                        labelText: 'Approximate Time',
+                        obscureText: false,
+                        keyboardType: TextInputType.datetime,
+                        validator:
+                            (value) =>
+                                value!.isEmpty ? 'Time is required' : null,
+                      ),
+                      const SizedBox(height: 16),
+                      ElevatedButton(
+                        onPressed: _pickImage,
+                        child: Text(
+                          _mediaFile == null ? 'Pick Image' : 'Image Selected',
+                        ),
+                      ),
+                      if (_mediaFile != null)
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8.0),
+                          child: Image.file(
+                            _mediaFile!,
+                            height: 100,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      const SizedBox(height: 16),
+                      _isLoading
+                          ? Center(child: CircularProgressIndicator())
+                          : ElevatedButton(
+                            onPressed: _submitReport,
+                            child: Text('Submit Report'),
+                          ),
+                    ],
+                  ),
+                ),
+              ),
+    );
+  }
+}
+
+
+// === File: .\my_app\lib\presentation\services\api_service.dart ===
+import 'dart:convert';
+import 'dart:io';
+import 'package:http/http.dart' as http;
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:my_app/data/models/lost_and_found_item.dart';
+import 'package:my_app/data/models/claim.dart';
+import 'dart:developer' as developer;
+import 'package:my_app/data/models/lost_and_found_item.dart';
+import 'package:my_app/data/models/claim.dart';
+
+class ApiService {
+  static const String baseUrl = 'http://10.0.2.2:8000/api/lostandfound';
+  static const FlutterSecureStorage storage = FlutterSecureStorage();
+
+  static Future<List<LostAndFoundItem>> fetchLostAndFoundItems(
+    String endpoint,
+  ) async {
+    final token = await storage.read(key: 'auth_token');
+    final response = await http.get(
+      Uri.parse('$baseUrl/$endpoint'),
+      headers: {
+        'Content-Type': 'application/json',
+        if (token != null) 'Authorization': 'Token $token',
+      },
+    );
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      final value =
+          (data['results'] as List).map((json) {
+            try {
+              return LostAndFoundItem.fromJson(json as Map<String, dynamic>);
+            } catch (e) {
+              developer.log('Error parsing item: $json, Error: $e');
+              return LostAndFoundItem(
+                id: -1,
+                user: User(id: -1, name: 'Unknown User', detailUrl: ''),
+                title: 'Error',
+                description: 'Failed to parse: $e',
+                lostDate: null,
+                foundDate: null,
+                approximateTime: 'Unknown time',
+                location: 'Unknown location',
+                status: 'Unknown',
+                approvalStatus: 'Pending',
+                createdAt: DateTime.now(),
+                updatedAt: DateTime.now(),
+                media: [],
+                postType: 'Unknown',
+                isAdmin: false,
+                detailUrl: '',
+                claimsUrl: '',
+                resolveUrl: null,
+                approveUrl: null,
+                university: null,
+              );
+            }
+          }).toList();
+      developer.log('Fetched items: $value');
+      return value;
+    } else {
+      throw Exception('Failed to load items: ${response.statusCode}');
+    }
+  }
+
+  static Future<LostAndFoundItem> fetchItemDetail(
+    String endpoint,
+    int id,
+  ) async {
+    final token = await storage.read(key: 'auth_token');
+    final response = await http.get(
+      Uri.parse('$baseUrl/$endpoint/$id/'),
+      headers: {
+        'Content-Type': 'application/json',
+        if (token != null) 'Authorization': 'Token $token',
+      },
+    );
+
+    if (response.statusCode == 200) {
+      return LostAndFoundItem.fromJson(jsonDecode(response.body));
+    } else {
+      throw Exception(
+        'Failed to load item: ${response.statusCode}, ${response.body}',
+      );
+    }
+  }
+
+  static Future<void> createLostItem(Map<String, dynamic> data) async {
+    final token = await storage.read(key: 'auth_token');
+    if (token == null) throw Exception('No authentication token found');
+
+    var request = http.MultipartRequest('POST', Uri.parse('$baseUrl/lost/'));
+    request.headers['Authorization'] = 'Token $token';
+
+    // Add text fields
+    data.forEach((key, value) {
+      if (value != null && key != 'media') {
+        request.fields[key] = value.toString();
+      }
+    });
+
+    // Add media file if present
+    if (data['media'] != null) {
+      File mediaFile = data['media'] as File;
+      request.files.add(
+        await http.MultipartFile.fromPath('media_files', mediaFile.path),
+      );
+    }
+
+    final response = await request.send();
+    final responseBody = await http.Response.fromStream(response);
+
+    if (response.statusCode != 201) {
+      throw Exception(
+        'Failed to create lost item: ${response.statusCode}, ${responseBody.body}',
+      );
+    }
+  }
+
+  static Future<void> createFoundItem(Map<String, dynamic> data) async {
+    final token = await storage.read(key: 'auth_token');
+    if (token == null) throw Exception('No authentication token found');
+
+    var request = http.MultipartRequest('POST', Uri.parse('$baseUrl/found/'));
+    request.headers['Authorization'] = 'Token $token';
+
+    // Add text fields
+    data.forEach((key, value) {
+      if (value != null && key != 'media') {
+        request.fields[key] = value.toString();
+      }
+    });
+
+    // Add media file if present
+    if (data['media'] != null) {
+      File mediaFile = data['media'] as File;
+      request.files.add(
+        await http.MultipartFile.fromPath('media_files', mediaFile.path),
+      );
+    }
+
+    final response = await request.send();
+    final responseBody = await http.Response.fromStream(response);
+
+    if (response.statusCode != 201) {
+      throw Exception(
+        'Failed to create found item: ${response.statusCode}, ${responseBody.body}',
+      );
+    }
+  }
+
+  static Future<List<Claim>> fetchClaims(String endpoint, int itemId) async {
+    final token = await storage.read(key: 'auth_token');
+    if (token == null) throw Exception('No authentication token found');
+
+    final response = await http.get(
+      Uri.parse('$baseUrl/$endpoint/$itemId/claims/'),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Token $token',
+      },
+    );
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      final value =
+          (data['results'] as List)
+              .map((json) => Claim.fromJson(json as Map<String, dynamic>))
+              .toList();
+      developer.log('Fetched claims: $value');
+      return value;
+    } else {
+      throw Exception(
+        'Failed to load claims: ${response.statusCode}, ${response.body}',
+      );
+    }
+  }
+
+  static Future<void> createClaim(
+    String endpoint,
+    Map<String, dynamic> data,
+  ) async {
+    final token = await storage.read(key: 'auth_token');
+    if (token == null) throw Exception('No authentication token found');
+
+    var request = http.MultipartRequest(
+      'POST',
+      Uri.parse('$baseUrl/$endpoint/claim/'),
+    );
+    request.headers['Authorization'] = 'Token $token';
+
+    // Add text fields
+    data.forEach((key, value) {
+      if (value != null && key != 'media') {
+        request.fields[key] = value.toString();
+      }
+    });
+
+    // Add media file if present
+    if (data['media'] != null) {
+      File mediaFile = data['media'] as File;
+      request.files.add(
+        await http.MultipartFile.fromPath('media_files', mediaFile.path),
+      );
+    }
+
+    final response = await request.send();
+    final responseBody = await http.Response.fromStream(response);
+
+    if (response.statusCode != 201) {
+      throw Exception(
+        'Failed to create claim: ${response.statusCode}, ${responseBody.body}',
+      );
+    }
+  }
+
+  static Future<void> resolveItem(
+    String endpoint,
+    int itemId,
+    Map<String, dynamic> data,
+  ) async {
+    final token = await storage.read(key: 'auth_token');
+    if (token == null) throw Exception('No authentication token found');
+
+    final response = await http.post(
+      Uri.parse('$baseUrl/$endpoint/$itemId/resolve/'),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Token $token',
+      },
+      body: jsonEncode(data),
+    );
+
+    if (response.statusCode != 200) {
+      throw Exception(
+        'Failed to resolve item: ${response.statusCode}, ${response.body}',
+      );
+    }
+  }
+
+  static Future<void> updateItem(
+    String type,
+    int itemId,
+    Map<String, dynamic> data,
+  ) async {
+    final token = await storage.read(key: 'auth_token');
+    if (token == null) throw Exception('No authentication token found');
+    final url =
+        type == 'lost'
+            ? 'http://10.0.2.2:8000/api/lostandfound/lost/$itemId/'
+            : 'http://10.0.2.2:8000/api/lostandfound/found/$itemId/';
+    final response = await http.put(
+      Uri.parse(url),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Token $token', // Assuming token-based auth
+      },
+      body: jsonEncode(data),
+    );
+
+    if (response.statusCode != 200) {
+      throw Exception(
+        'Failed to update item: ${response.statusCode}, ${response.body}',
+      );
+    }
+  }
+
+  static Future<Map<String, dynamic>?> fetchProfile(
+    String token,
+    int userId,
+  ) async {
+    final url = Uri.parse('http://10.0.2.2:8000/api/accounts/$userId/');
+       
+    final response = await http.get(
+      url,
+      headers: {
+        'Authorization': 'Token $token',
+        'Content-Type': 'application/json',
+      },
+    );
+    print( response.body);
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body);
+    } else {
+      print('Failed to load profile: ${response.statusCode}');
+      return null;
+    }
+  }
+}
+
+
+
+// === File: .\my_app\lib\presentation\widgets\custom_feature_card.dart ===
+import 'package:flutter/material.dart';
+
+class CustomFeatureCard extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final VoidCallback onTap;
+  final Color iconColor;
+  final double elevation;
+  final Duration animationDuration;
+
+  const CustomFeatureCard({
+    Key? key,
+    required this.icon,
+    required this.title,
+    required this.onTap,
+    this.iconColor = Colors.blueAccent,
+    this.elevation = 4.0,
+    this.animationDuration = const Duration(milliseconds: 500),
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedOpacity(
+      opacity: 1.0,
+      duration: animationDuration,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(20),
+        child: Card(
+          elevation: elevation,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Container(
+            width: 140, // Adjust width based on layout
+            height: 140, // Adjust height based on layout
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  icon,
+                  color: iconColor,
+                  size: 40,
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  title,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.indigo,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+// === File: .\my_app\lib\presentation\widgets\custom_text_field.dart ===
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/material.dart';
+
+class CustomTextField extends StatelessWidget {
+  final TextEditingController controller;
+  final String labelText;
+  final bool obscureText;
+  final String? Function(String?)? validator;
+  final TextInputType? keyboardType;
+
+  const CustomTextField({
+    Key? key,
+    required this.controller,
+    required this.labelText,
+    required this.obscureText,
+    this.validator,
+    this.keyboardType,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: controller,
+      decoration: InputDecoration(
+        labelText: labelText,
+        border: const OutlineInputBorder(),
+      ),
+      obscureText: obscureText,
+      validator: validator,
+      keyboardType: keyboardType,
+    );
+  }
+}
+
+
+
+// === File: .\my_app\test\widget_test.dart ===
+// This is a basic Flutter widget test.
+//
+// To perform an interaction with a widget in your test, use the WidgetTester
+// utility in the flutter_test package. For example, you can send tap and scroll
+// gestures. You can also use WidgetTester to find child widgets in the widget
+// tree, read text, and verify that the values of widget properties are correct.
+
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+import 'package:my_app/main.dart';
+
+void main() {
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyApp());
+
+    // Verify that our counter starts at 0.
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
+
+    // Tap the '+' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.add));
+    await tester.pump();
+
+    // Verify that our counter has incremented.
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
+  });
+}
+
