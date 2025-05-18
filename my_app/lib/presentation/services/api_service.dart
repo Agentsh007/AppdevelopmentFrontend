@@ -7,63 +7,147 @@ import 'package:my_app/data/models/claim.dart';
 import 'dart:developer' as developer;
 
 class ApiService {
-  static const String base = 'http://10.0.2.2:8000';
-  static const String baseUrl = '$base/api/lostandfound';
-  static const String placesBaseUrl = '$base/api/places';
+  static final String base = _getBaseUrl();
+  static String _getBaseUrl() {
+    if (Platform.isAndroid) {
+      // Emulator
+      return 'http://10.0.2.2:8000';
+    } else {
+      // iOS simulator or real device (both Android and iOS)
+      return 'http://192.168.0.182:8000'; // Replace with your actual PC IP
+    }
+  }
+
+  static final String baseUrl = '$base/api/lostandfound';
+  static final String placesBaseUrl = '$base/api/places';
 
   static const FlutterSecureStorage storage = FlutterSecureStorage();
+
+  // static Future<List<LostAndFoundItem>> fetchLostAndFoundItems(
+  //   String endpoint,
+  // ) async {
+  //   final token = await storage.read(key: 'auth_token');
+  //   final response = await http.get(
+  //     Uri.parse('$baseUrl/$endpoint'),
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       if (token != null) 'Authorization': 'Token $token',
+  //     },
+  //   );
+  //   print(response.body);
+  //   if (response.statusCode == 200) {
+  //     final data = jsonDecode(response.body);
+  //     final value =
+  //         (data['results'] as List).map((json) {
+  //           try {
+  //             return LostAndFoundItem.fromJson(json as Map<String, dynamic>);
+  //           } catch (e) {
+  //             developer.log('Error parsing item: $json, Error: $e');
+  //             return LostAndFoundItem(
+  //               id: -1,
+  //               user: User(id: -1, name: 'Unknown User', detailUrl: ''),
+  //               title: 'Error',
+  //               description: 'Failed to parse: $e',
+  //               lostDate: null,
+  //               foundDate: null,
+  //               approximateTime: 'Unknown time',
+  //               location: 'Unknown location',
+  //               status: 'Unknown',
+  //               approvalStatus: 'Pending',
+  //               createdAt: DateTime.now(),
+  //               updatedAt: DateTime.now(),
+  //               media: [],
+  //               postType: 'Unknown',
+  //               isAdmin: false,
+  //               detailUrl: '',
+  //               claimsUrl: '',
+  //               resolveUrl: null,
+  //               approveUrl: null,
+  //               university: null,
+  //             );
+  //           }
+  //         }).toList();
+  //     developer.log('Fetched items: $value');
+  //     return value;
+  //   } else {
+  //     throw Exception('Failed to load items: ${response.statusCode}');
+  //   }
+  // }
 
   static Future<List<LostAndFoundItem>> fetchLostAndFoundItems(
     String endpoint,
   ) async {
     final token = await storage.read(key: 'auth_token');
-    final response = await http.get(
-      Uri.parse('$baseUrl/$endpoint'),
-      headers: {
-        'Content-Type': 'application/json',
-        if (token != null) 'Authorization': 'Token $token',
-      },
-    );
+    developer.log('Auth token: $token');
 
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
-      final value =
-          (data['results'] as List).map((json) {
-            try {
-              return LostAndFoundItem.fromJson(json as Map<String, dynamic>);
-            } catch (e) {
-              developer.log('Error parsing item: $json, Error: $e');
-              return LostAndFoundItem(
-                id: -1,
-                user: User(id: -1, name: 'Unknown User', detailUrl: ''),
-                title: 'Error',
-                description: 'Failed to parse: $e',
-                lostDate: null,
-                foundDate: null,
-                approximateTime: 'Unknown time',
-                location: 'Unknown location',
-                status: 'Unknown',
-                approvalStatus: 'Pending',
-                createdAt: DateTime.now(),
-                updatedAt: DateTime.now(),
-                media: [],
-                postType: 'Unknown',
-                isAdmin: false,
-                detailUrl: '',
-                claimsUrl: '',
-                resolveUrl: null,
-                approveUrl: null,
-                university: null,
-              );
-            }
-          }).toList();
-      developer.log('Fetched items: $value');
-      return value;
-    } else {
-      throw Exception('Failed to load items: ${response.statusCode}');
+    final cleanEndpoint = endpoint.startsWith('/') ? endpoint.substring(1) : endpoint;
+    final url = '$baseUrl/$cleanEndpoint/';
+    developer.log('Request URL: $url');
+
+    try {
+      final response = await http.get(
+        Uri.parse(url),
+        headers: {
+          'Content-Type': 'application/json',
+          if (token != null) 'Authorization': 'Token $token',
+        },
+      );
+
+      developer.log('Response status: ${response.statusCode}');
+      developer.log('Response body: ${response.body}');
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        developer.log('Parsed JSON: $data');
+
+        List<dynamic> items;
+        if (data is List) {
+          items = data;
+        } else if (data is Map<String, dynamic> && data.containsKey('results') && data['results'] is List) {
+          items = data['results'];
+        } else {
+          throw Exception('Response does not contain a list of items or "results" key');
+        }
+
+        final value = items.map((json) {
+          try {
+            return LostAndFoundItem.fromJson(json as Map<String, dynamic>);
+          } catch (e) {
+            developer.log('Error parsing item: $json, Error: $e');
+            return LostAndFoundItem(
+              id: -1,
+              user: User(id: -1, name: 'Unknown User', detailUrl: ''),
+              title: 'Error',
+              description: 'Failed to parse: $e',
+              lostDate: null,
+              foundDate: null,
+              approximateTime: 'Unknown time',
+              location: 'Unknown location',
+              status: 'Unknown',
+              approvalStatus: 'Pending',
+              createdAt: DateTime.now(),
+              updatedAt: DateTime.now(),
+              media: [],
+              postType: 'Unknown',
+              isAdmin: false,
+              detailUrl: '',
+              claimsUrl: '',
+              resolveUrl: null,
+              approveUrl: null,
+              university: null,
+            );
+          }
+        }).toList();
+        developer.log('Fetched items: $value');
+        return value;
+      } else {
+        throw Exception('Failed to load items: ${response.statusCode}, ${response.body}');
+      }
+    } catch (e) {
+      developer.log('Error in fetchLostAndFoundItems: $e');
+      rethrow;
     }
   }
-
   static Future<LostAndFoundItem> fetchItemDetail(
     String endpoint,
     int id,

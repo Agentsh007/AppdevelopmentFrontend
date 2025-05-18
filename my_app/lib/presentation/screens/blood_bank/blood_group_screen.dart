@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -12,7 +14,16 @@ class BloodGroupsScreen extends StatefulWidget {
 class _BloodGroupsScreenState extends State<BloodGroupsScreen> {
   List<String> _bloodGroups = [];
   bool _isLoading = false;
-
+ static final baseUrl = _getBaseUrl();
+  static String _getBaseUrl() {
+    if (Platform.isAndroid) {
+      // Emulator
+      return 'http://10.0.2.2:8000';
+    } else {
+      // iOS simulator or real device (both Android and iOS)
+      return 'http://192.168.0.182:8000'; // Replace with your actual PC IP
+    }
+  }
   @override
   void initState() {
     super.initState();
@@ -22,7 +33,7 @@ class _BloodGroupsScreenState extends State<BloodGroupsScreen> {
   Future<void> _fetchBloodGroups() async {
     setState(() => _isLoading = true);
     try {
-      final response = await http.get(Uri.parse('http://10.0.2.2:8000/api/bloodbank/bloodgroups/'));
+      final response = await http.get(Uri.parse('$baseUrl/api/bloodbank/bloodgroups/'));
       if (response.statusCode == 200) {
         setState(() {
           _bloodGroups = List<String>.from(jsonDecode(response.body));
@@ -47,7 +58,7 @@ class _BloodGroupsScreenState extends State<BloodGroupsScreen> {
                 return ListTile(
                   title: Text(_bloodGroups[index]),
                   onTap: () async {
-                    final response = await http.get(Uri.parse('http://10.0.2.2:8000/api/bloodbank/bloodgroups/${_bloodGroups[index]}/'));
+                    final response = await http.get(Uri.parse('$baseUrl/api/bloodbank/bloodgroups/${_bloodGroups[index]}/'));
                     if (response.statusCode == 200) {
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Details: ${_bloodGroups[index]}')));
                     } else {

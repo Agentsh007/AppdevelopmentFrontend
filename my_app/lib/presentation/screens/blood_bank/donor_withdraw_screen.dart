@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
@@ -13,14 +15,23 @@ class DonorWithdrawScreen extends StatefulWidget {
 
 class _DonorWithdrawScreenState extends State<DonorWithdrawScreen> {
   bool _isLoading = false;
-
+ static final baseUrl = _getBaseUrl();
+  static String _getBaseUrl() {
+    if (Platform.isAndroid) {
+      // Emulator
+      return 'http://10.0.2.2:8000';
+    } else {
+      // iOS simulator or real device (both Android and iOS)
+      return 'http://192.168.0.182:8000'; // Replace with your actual PC IP
+    }
+  }
   Future<void> _withdrawDonor() async {
     setState(() => _isLoading = true);
     try {
       final authProvider = Provider.of<AuthProvider>(context, listen: false);
       final token = authProvider.user?.token;
       final response = await http.post(
-        Uri.parse('http://10.0.2.2:8000/api/bloodbank/donor/withdraw/'),
+        Uri.parse('$baseUrl/api/bloodbank/donor/withdraw/'),
         headers: {'Authorization': 'Token $token'},
       );
       if (response.statusCode == 204) {

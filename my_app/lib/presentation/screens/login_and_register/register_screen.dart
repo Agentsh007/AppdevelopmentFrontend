@@ -191,7 +191,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           .where((unit) => unit.universityId == _selectedUniversityId)
                           .map((unit) => DropdownMenuItem(
                                 value: unit.id,
-                                child: Text(unit.name),
+                                child: Text(unit.shortName),
                               ))
                           .toList(),
                   onChanged: (value) {

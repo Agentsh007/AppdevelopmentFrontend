@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
@@ -23,7 +25,16 @@ class _CreateBloodRequestScreenState extends State<CreateBloodRequestScreen> {
   bool _isLoading = false;
   List<String> _bloodGroups = [];
   List<Map<String, dynamic>> _universities = [];
-
+ static final baseUrl = _getBaseUrl();
+  static String _getBaseUrl() {
+    if (Platform.isAndroid) {
+      // Emulator
+      return 'http://10.0.2.2:8000';
+    } else {
+      // iOS simulator or real device (both Android and iOS)
+      return 'http://192.168.0.182:8000'; // Replace with your actual PC IP
+    }
+  }
   @override
   void initState() {
     super.initState();
@@ -45,7 +56,7 @@ class _CreateBloodRequestScreenState extends State<CreateBloodRequestScreen> {
   Future<void> _fetchBloodGroups() async {
     try {
       final response = await http.get(
-        Uri.parse('http://10.0.2.2:8000/api/bloodbank/bloodgroups/'),
+        Uri.parse('$baseUrl/api/bloodbank/bloodgroups/'),
       );
       if (response.statusCode == 200) {
         setState(() {
@@ -66,7 +77,7 @@ class _CreateBloodRequestScreenState extends State<CreateBloodRequestScreen> {
   Future<void> _fetchUniversities() async {
     try {
       final response = await http.get(
-        Uri.parse('http://10.0.2.2:8000/api/universities/'),
+        Uri.parse('$baseUrl/api/universities/'),
       );
       if (response.statusCode == 200) {
         setState(() {
@@ -97,7 +108,7 @@ class _CreateBloodRequestScreenState extends State<CreateBloodRequestScreen> {
         return;
       }
       final response = await http.post(
-        Uri.parse('http://10.0.2.2:8000/api/bloodbank/requests/'),
+        Uri.parse('$baseUrl/api/bloodbank/requests/'),
         headers: {
           'Authorization': 'Token $token',
           'Content-Type': 'application/json',

@@ -49,7 +49,7 @@ class _BloodBankScreenState extends State<BloodBankScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.bloodtype), label: 'Blood Groups'),
           BottomNavigationBarItem(icon: Icon(Icons.person_add), label: 'Donor'),
           BottomNavigationBarItem(icon: Icon(Icons.request_page), label: 'Requests'),
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Donor List'),
+          // BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Donor List'),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.redAccent,

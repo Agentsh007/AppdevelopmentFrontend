@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
@@ -22,6 +24,17 @@ class _DonorProfileScreenState extends State<DonorProfileScreen> {
   bool _isLoading = false;
   Map<String, dynamic>? _profile;
 
+ static final baseUrl = _getBaseUrl();
+  static String _getBaseUrl() {
+    if (Platform.isAndroid) {
+      // Emulator
+      return 'http://10.0.2.2:8000';
+    } else {
+      // iOS simulator or real device (both Android and iOS)
+      return 'http://192.168.0.182:8000'; // Replace with your actual PC IP
+    }
+  }
+  
   @override
   void initState() {
     super.initState();
@@ -48,7 +61,7 @@ class _DonorProfileScreenState extends State<DonorProfileScreen> {
         return;
       }
       final response = await http.get(
-        Uri.parse('http://10.0.2.2:8000/api/bloodbank/donor/profile/'),
+        Uri.parse('$baseUrl/api/bloodbank/donor/profile/'),
         headers: {'Authorization': 'Token $token'},
       );
       if (response.statusCode == 200) {
@@ -110,7 +123,7 @@ class _DonorProfileScreenState extends State<DonorProfileScreen> {
         return;
       }
       final response = await http.patch(
-        Uri.parse('http://10.0.2.2:8000/api/bloodbank/donor/profile/'),
+        Uri.parse('$baseUrl/api/bloodbank/donor/profile/'),
         headers: {
           'Authorization': 'Token $token',
           'Content-Type': 'application/json',

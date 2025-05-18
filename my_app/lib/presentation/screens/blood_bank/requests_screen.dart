@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:my_app/presentation/screens/blood_bank/create_blood_request_screen.dart';
@@ -13,7 +15,16 @@ class RequestsScreen extends StatefulWidget {
 }
 
 class _RequestsScreenState extends State<RequestsScreen> {
-  
+  static final baseUrl = _getBaseUrl();
+  static String _getBaseUrl() {
+    if (Platform.isAndroid) {
+      // Emulator
+      return 'http://10.0.2.2:8000';
+    } else {
+      // iOS simulator or real device (both Android and iOS)
+      return 'http://192.168.0.182:8000'; // Replace with your actual PC IP
+    }
+  }
   bool _isLoading = false;
   List<Map<String, dynamic>> _requests = [];
 
@@ -30,7 +41,7 @@ class _RequestsScreenState extends State<RequestsScreen> {
       final token = authProvider.user?.token;
       print('Fetching requests with token: $token');
       final response = await http.get(
-        Uri.parse('http://10.0.2.2:8000/api/bloodbank/requests/'),
+        Uri.parse('$baseUrl/api/bloodbank/requests/'),
         headers: token != null ? {'Authorization': 'Token $token'} : {},
       );
       print('Response status: ${response.statusCode}');

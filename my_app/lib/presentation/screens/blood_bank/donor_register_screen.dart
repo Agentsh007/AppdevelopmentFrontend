@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
@@ -20,7 +22,18 @@ class _DonorRegisterScreenState extends State<DonorRegisterScreen> {
   bool _consent = false;
   bool _isLoading = false;
   List<String> _bloodGroups = [];
-
+ 
+   static final baseUrl = _getBaseUrl();
+  static String _getBaseUrl() {
+    if (Platform.isAndroid) {
+      // Emulator
+      return 'http://10.0.2.2:8000';
+    } else {
+      // iOS simulator or real device (both Android and iOS)
+      return 'http://192.168.0.182:8000'; // Replace with your actual PC IP
+    }
+  }
+  
   @override
   void initState() {
     super.initState();
@@ -37,7 +50,7 @@ class _DonorRegisterScreenState extends State<DonorRegisterScreen> {
 
   Future<void> _fetchBloodGroups() async {
     try {
-      final response = await http.get(Uri.parse('http://10.0.2.2:8000/api/bloodbank/bloodgroups/'));
+      final response = await http.get(Uri.parse('$baseUrl/bloodbank/bloodgroups/'));
       if (response.statusCode == 200) {
         setState(() {
           _bloodGroups = List<String>.from(jsonDecode(response.body));
@@ -55,7 +68,7 @@ class _DonorRegisterScreenState extends State<DonorRegisterScreen> {
       final authProvider = Provider.of<AuthProvider>(context, listen: false);
       final token = authProvider.user?.token;
       final response = await http.post(
-        Uri.parse('http://10.0.2.2:8000/api/bloodbank/donor/register/'),
+        Uri.parse('$baseUrl/api/bloodbank/donor/register/'),
         headers: {'Authorization': 'Token $token', 'Content-Type': 'application/json'},
         body: jsonEncode({
           'emergency_contact': _emergencyContactController.text,

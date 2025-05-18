@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:my_app/presentation/widgets/custom_text_field.dart';
@@ -15,7 +17,16 @@ class _DonorListScreenState extends State<DonorListScreen> {
   bool _isLoading = false;
   List<String> _bloodGroups = [];
   List<Map<String, dynamic>> _donors = [];
-
+ static final baseUrl = _getBaseUrl();
+  static String _getBaseUrl() {
+    if (Platform.isAndroid) {
+      // Emulator
+      return 'http://10.0.2.2:8000';
+    } else {
+      // iOS simulator or real device (both Android and iOS)
+      return 'http://192.168.0.182:8000'; // Replace with your actual PC IP
+    }
+  }
   @override
   void initState() {
     super.initState();
@@ -32,7 +43,7 @@ class _DonorListScreenState extends State<DonorListScreen> {
   Future<void> _fetchBloodGroups() async {
     try {
       final response = await http.get(
-        Uri.parse('http://10.0.2.2:8000/api/bloodbank/bloodgroups/'),
+        Uri.parse(' $baseUrl/api/bloodbank/bloodgroups/'),
       );
       if (response.statusCode == 200) {
         setState(() {
@@ -53,7 +64,7 @@ class _DonorListScreenState extends State<DonorListScreen> {
   Future<void> _fetchDonors({String? bloodGroup}) async {
     setState(() => _isLoading = true);
     try {
-      String url = 'http://10.0.2.2:8000/api/bloodbank/donors/';
+      String url = '$baseUrl/api/bloodbank/donors/';
       if (bloodGroup != null && bloodGroup.isNotEmpty && bloodGroup != 'All') {
         url += '?blood_group=$bloodGroup';
       }
